@@ -3,7 +3,7 @@
     "dimension": 9,
     "act_size": 10,
     "n_target": 2,
-    "episode_workers": 250,
+    "episode_workers": 128,
     "acquisition_cost": 0.05,
     "model_dir": "./exp/gas/water",
     "num_heads": 4,
@@ -19,7 +19,7 @@
     "ratio_clip_decay": 0,
     "pretrain_iters": 0,
     "train_iters": 30,
-    "batch_size": 250,
+    "batch_size": 128,
     "epochs": 5,
     "finetune_env": 0,
     "clean_buffer": 1,
@@ -30,7 +30,7 @@
     "ent_coef": 0.0,
     "clip_grad_norm": 1.0,
     "log_freq": 1,
-    "eval_freq": 100,
+    "eval_freq": 10,
     "save_freq": 1,
     "exp_dir": "./exp/gas/ppo"
 }
