@@ -144,7 +144,7 @@ class Env(object):
 						acquisition_cost = self.cost[a]
 						info_gain = self._info_gain(x, old_m, m, y)
 						reward[normal] = info_gain - acquisition_cost
-				logger.info(f'done:  {done}')		
+				# logger.info(f'done:  {done}')		
 				return self.x * self.m, self.m.copy(), reward, done
 
 		def peek(self, state, mask):

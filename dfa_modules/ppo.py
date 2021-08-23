@@ -267,7 +267,7 @@ class PPOPolicy(object):
             episode_reward += r
             s, m = s_next, m_next
         logger.info('rollout finished.')
-        logger.info(f'm:  {m}')
+        # logger.info(f'm:  {m}')
 
         logger.debug(f'mask:\n{np.concatenate(masks)}')
         logger.debug(f'state:\n{np.concatenate(obs)}')
@@ -411,7 +411,7 @@ class PPOPolicy(object):
             reward_history.append(ep_reward)
             reward_averaged.append(np.mean(reward_history[-10:]))
             total_rec += n_rec
-
+            logger.info(f'reward_history:  {reward_history}')
             for batch in buffer.loop(self.hps.batch_size, self.hps.epochs):
                 _, summ_str = self.sess.run(
                  [self.train_ops, self.merged_summary],
