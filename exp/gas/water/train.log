@@ -1,5 +1,5 @@
 {'affine_hids': [256, 256],
- 'batch_size': 128,
+ 'batch_size': 500,
  'class_weights': [1],
  'clip_gradient': 1,
  'coupling_hids': [256, 256],
@@ -8,8 +8,8 @@
  'decay_steps': 10000,
  'dfile': './data/water.pkl',
  'dimension': 9,
- 'epochs': 500,
- 'exp_dir': './exp/water',
+ 'epochs': 250,
+ 'exp_dir': './exp/gas/water',
  'gfile': None,
  'gpu': '0',
  'lambda_mse': 0.0,
@@ -33,16 +33,16 @@
  'seed': 123,
  'summ_freq': 100,
  'transform': ['AF', 'TL', 'TL', 'TL', 'TL', 'AF']}
-From scripts/train_model.py:34: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+From scripts/train.py:34: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
 
-From scripts/train_model.py:36: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+From scripts/train.py:36: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
 
-From scripts/train_model.py:40: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+From scripts/train.py:40: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
 
 From F:\annoconda\envs\tf1.15\lib\site-packages\tensorflow_core\python\data\util\random_seed.py:58: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use tf.where in 2.0, which has the same broadcast rule as np.where
-From C:\Users\wanyong\Desktop\models\water_imputation\datasets\questions.py:54: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+From C:\Users\wanyong\Desktop\water_action\datasets\questions.py:54: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 tf.py_func is deprecated in TF V2. Instead, there are two
     options available in V2.
@@ -55,17 +55,17 @@ tf.py_func is deprecated in TF V2. Instead, there are two
     (it is not differentiable, and manipulates numpy arrays). It drops the
     stateful argument making all functions stateful.
     
-From C:\Users\wanyong\Desktop\models\water_imputation\datasets\questions.py:59: DatasetV1.make_initializable_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+From C:\Users\wanyong\Desktop\water_action\datasets\questions.py:59: DatasetV1.make_initializable_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_initializable_iterator(dataset)`.
 ('trainset: 2621', 'validset: 328', 'testset: 327')
-From C:\Users\wanyong\Desktop\models\water_imputation\models\ACTAN\transforms.py:39: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+From C:\Users\wanyong\Desktop\water_action\models\ACTAN\transforms.py:39: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
 
-From C:\Users\wanyong\Desktop\models\water_imputation\models\ACTAN\transforms.py:39: The name tf.AUTO_REUSE is deprecated. Please use tf.compat.v1.AUTO_REUSE instead.
+From C:\Users\wanyong\Desktop\water_action\models\ACTAN\transforms.py:39: The name tf.AUTO_REUSE is deprecated. Please use tf.compat.v1.AUTO_REUSE instead.
 
-From C:\Users\wanyong\Desktop\models\water_imputation\models\ACTAN\transforms.py:505: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+From C:\Users\wanyong\Desktop\water_action\models\ACTAN\transforms.py:505: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
 
-From C:\Users\wanyong\Desktop\models\water_imputation\models\acflow_classifier.py:76: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+From C:\Users\wanyong\Desktop\water_action\models\acflow_classifier.py:76: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
 
 
 The TensorFlow contrib module will not be included in TensorFlow 2.0.
@@ -81,46 +81,46 @@ Instructions for updating:
 From F:\annoconda\envs\tf1.15\lib\site-packages\tensorflow_core\python\ops\resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
 Instructions for updating:
 If using Keras pass *_constraint arguments to layers.
-From C:\Users\wanyong\Desktop\models\water_imputation\models\ACTAN\transforms.py:592: The name tf.matrix_diag is deprecated. Please use tf.linalg.diag instead.
+From C:\Users\wanyong\Desktop\water_action\models\ACTAN\transforms.py:592: The name tf.matrix_diag is deprecated. Please use tf.linalg.diag instead.
 
-From C:\Users\wanyong\Desktop\models\water_imputation\models\ACTAN\transforms.py:541: The name tf.matrix_band_part is deprecated. Please use tf.linalg.band_part instead.
+From C:\Users\wanyong\Desktop\water_action\models\ACTAN\transforms.py:541: The name tf.matrix_band_part is deprecated. Please use tf.linalg.band_part instead.
 
-From C:\Users\wanyong\Desktop\models\water_imputation\models\ACTAN\transforms.py:554: The name tf.log is deprecated. Please use tf.math.log instead.
+From C:\Users\wanyong\Desktop\water_action\models\ACTAN\transforms.py:554: The name tf.log is deprecated. Please use tf.math.log instead.
 
-From C:\Users\wanyong\Desktop\models\water_imputation\models\ACTAN\transforms.py:554: The name tf.matrix_diag_part is deprecated. Please use tf.linalg.diag_part instead.
+From C:\Users\wanyong\Desktop\water_action\models\ACTAN\transforms.py:554: The name tf.matrix_diag_part is deprecated. Please use tf.linalg.diag_part instead.
 
-From C:\Users\wanyong\Desktop\models\water_imputation\models\ACTAN\transforms.py:269: The name tf.mod is deprecated. Please use tf.math.mod instead.
+From C:\Users\wanyong\Desktop\water_action\models\ACTAN\transforms.py:269: The name tf.mod is deprecated. Please use tf.math.mod instead.
 
-From C:\Users\wanyong\Desktop\models\water_imputation\models\acflow_classifier.py:49: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+From C:\Users\wanyong\Desktop\water_action\models\acflow_classifier.py:49: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
 
-From C:\Users\wanyong\Desktop\models\water_imputation\models\ACTAN\likelihood.py:243: multinomial (from tensorflow.python.ops.random_ops) is deprecated and will be removed in a future version.
+From C:\Users\wanyong\Desktop\water_action\models\ACTAN\likelihood.py:243: multinomial (from tensorflow.python.ops.random_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use `tf.random.categorical` instead.
-From C:\Users\wanyong\Desktop\models\water_imputation\models\ACTAN\likelihood.py:247: The name tf.random_normal is deprecated. Please use tf.random.normal instead.
+From C:\Users\wanyong\Desktop\water_action\models\ACTAN\likelihood.py:247: The name tf.random_normal is deprecated. Please use tf.random.normal instead.
 
-From C:\Users\wanyong\Desktop\models\water_imputation\models\ACTAN\transforms.py:566: The name tf.matrix_triangular_solve is deprecated. Please use tf.linalg.triangular_solve instead.
+From C:\Users\wanyong\Desktop\water_action\models\ACTAN\transforms.py:566: The name tf.matrix_triangular_solve is deprecated. Please use tf.linalg.triangular_solve instead.
 
-From C:\Users\wanyong\Desktop\models\water_imputation\models\acflow_classifier.py:119: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+From C:\Users\wanyong\Desktop\water_action\models\acflow_classifier.py:119: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
 
-From C:\Users\wanyong\Desktop\models\water_imputation\models\acflow_classifier.py:141: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+From C:\Users\wanyong\Desktop\water_action\models\acflow_classifier.py:141: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
 
-From C:\Users\wanyong\Desktop\models\water_imputation\models\acflow_classifier.py:142: The name tf.train.inverse_time_decay is deprecated. Please use tf.compat.v1.train.inverse_time_decay instead.
+From C:\Users\wanyong\Desktop\water_action\models\acflow_classifier.py:142: The name tf.train.inverse_time_decay is deprecated. Please use tf.compat.v1.train.inverse_time_decay instead.
 
-From C:\Users\wanyong\Desktop\models\water_imputation\models\acflow_classifier.py:148: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+From C:\Users\wanyong\Desktop\water_action\models\acflow_classifier.py:148: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
 
-From C:\Users\wanyong\Desktop\models\water_imputation\models\acflow_classifier.py:157: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
+From C:\Users\wanyong\Desktop\water_action\models\acflow_classifier.py:157: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
 
-From C:\Users\wanyong\Desktop\models\water_imputation\models\acflow_classifier.py:161: The name tf.check_numerics is deprecated. Please use tf.debugging.check_numerics instead.
+From C:\Users\wanyong\Desktop\water_action\models\acflow_classifier.py:161: The name tf.check_numerics is deprecated. Please use tf.debugging.check_numerics instead.
 
-From C:\Users\wanyong\Desktop\models\water_imputation\models\acflow_classifier.py:168: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+From C:\Users\wanyong\Desktop\water_action\models\acflow_classifier.py:168: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
 
-From scripts/train_model.py:55: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+From scripts/train.py:55: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
 
-From scripts/train_model.py:57: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+From scripts/train.py:57: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
 
-From scripts/train_model.py:57: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+From scripts/train.py:57: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
 
-From scripts/train_model.py:58: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+From scripts/train.py:58: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
 
 ====================
 Variables:
@@ -259,503 +259,253 @@ Variables:
 TOTAL TENSORS: 132 TOTAL PARAMS: 2.366020[M]
 ====================
 starting training
-Epoch 0, train: (current: 0.5067, best: 0.5067) valid: (current: 0.4878, best: 0.4878) test: (current: 0.5138, best: 0.5138)
-Epoch 1, train: (current: 0.5815, best: 0.5815) valid: (current: 0.4939, best: 0.4939) test: (current: 0.5199, best: 0.5199)
-Epoch 2, train: (current: 0.5899, best: 0.5899) valid: (current: 0.4817, best: 0.4939) test: (current: 0.5138, best: 0.5199)
-Epoch 3, train: (current: 0.5948, best: 0.5948) valid: (current: 0.5091, best: 0.5091) test: (current: 0.4954, best: 0.5199)
-Epoch 4, train: (current: 0.6085, best: 0.6085) valid: (current: 0.5396, best: 0.5396) test: (current: 0.5168, best: 0.5199)
-Epoch 5, train: (current: 0.5994, best: 0.6085) valid: (current: 0.5000, best: 0.5396) test: (current: 0.4954, best: 0.5199)
-Epoch 6, train: (current: 0.6051, best: 0.6085) valid: (current: 0.5457, best: 0.5457) test: (current: 0.5168, best: 0.5199)
-Epoch 7, train: (current: 0.5704, best: 0.6085) valid: (current: 0.5640, best: 0.5640) test: (current: 0.5138, best: 0.5199)
-Epoch 8, train: (current: 0.5712, best: 0.6085) valid: (current: 0.5183, best: 0.5640) test: (current: 0.4893, best: 0.5199)
-Epoch 9, train: (current: 0.5868, best: 0.6085) valid: (current: 0.5366, best: 0.5640) test: (current: 0.4801, best: 0.5199)
-Epoch 10, train: (current: 0.6043, best: 0.6085) valid: (current: 0.5274, best: 0.5640) test: (current: 0.4985, best: 0.5199)
-Epoch 11, train: (current: 0.5887, best: 0.6085) valid: (current: 0.5213, best: 0.5640) test: (current: 0.5076, best: 0.5199)
-Epoch 12, train: (current: 0.5944, best: 0.6085) valid: (current: 0.4787, best: 0.5640) test: (current: 0.5291, best: 0.5291)
-Epoch 13, train: (current: 0.6013, best: 0.6085) valid: (current: 0.5305, best: 0.5640) test: (current: 0.5138, best: 0.5291)
-Epoch 14, train: (current: 0.6028, best: 0.6085) valid: (current: 0.5152, best: 0.5640) test: (current: 0.5168, best: 0.5291)
-Epoch 15, train: (current: 0.5994, best: 0.6085) valid: (current: 0.5305, best: 0.5640) test: (current: 0.5076, best: 0.5291)
-Epoch 16, train: (current: 0.6143, best: 0.6143) valid: (current: 0.4970, best: 0.5640) test: (current: 0.5046, best: 0.5291)
-Epoch 17, train: (current: 0.5940, best: 0.6143) valid: (current: 0.5152, best: 0.5640) test: (current: 0.5138, best: 0.5291)
-Epoch 18, train: (current: 0.5952, best: 0.6143) valid: (current: 0.5030, best: 0.5640) test: (current: 0.4832, best: 0.5291)
-Epoch 19, train: (current: 0.6066, best: 0.6143) valid: (current: 0.5030, best: 0.5640) test: (current: 0.5229, best: 0.5291)
-Epoch 20, train: (current: 0.6009, best: 0.6143) valid: (current: 0.5152, best: 0.5640) test: (current: 0.5138, best: 0.5291)
-Epoch 21, train: (current: 0.5864, best: 0.6143) valid: (current: 0.5183, best: 0.5640) test: (current: 0.5229, best: 0.5291)
-Epoch 22, train: (current: 0.5929, best: 0.6143) valid: (current: 0.4695, best: 0.5640) test: (current: 0.5382, best: 0.5382)
-Epoch 23, train: (current: 0.5895, best: 0.6143) valid: (current: 0.5000, best: 0.5640) test: (current: 0.4893, best: 0.5382)
-Epoch 24, train: (current: 0.6116, best: 0.6143) valid: (current: 0.5244, best: 0.5640) test: (current: 0.5229, best: 0.5382)
-Epoch 25, train: (current: 0.6101, best: 0.6143) valid: (current: 0.5061, best: 0.5640) test: (current: 0.5046, best: 0.5382)
-Epoch 26, train: (current: 0.5940, best: 0.6143) valid: (current: 0.4878, best: 0.5640) test: (current: 0.4893, best: 0.5382)
-Epoch 27, train: (current: 0.5933, best: 0.6143) valid: (current: 0.5091, best: 0.5640) test: (current: 0.5229, best: 0.5382)
-Epoch 28, train: (current: 0.5990, best: 0.6143) valid: (current: 0.5274, best: 0.5640) test: (current: 0.5229, best: 0.5382)
-Epoch 29, train: (current: 0.5876, best: 0.6143) valid: (current: 0.5335, best: 0.5640) test: (current: 0.5382, best: 0.5382)
-Epoch 30, train: (current: 0.6147, best: 0.6147) valid: (current: 0.5183, best: 0.5640) test: (current: 0.5107, best: 0.5382)
-Epoch 31, train: (current: 0.5975, best: 0.6147) valid: (current: 0.5244, best: 0.5640) test: (current: 0.4862, best: 0.5382)
-Epoch 32, train: (current: 0.5651, best: 0.6147) valid: (current: 0.4939, best: 0.5640) test: (current: 0.4557, best: 0.5382)
-Epoch 33, train: (current: 0.5609, best: 0.6147) valid: (current: 0.5030, best: 0.5640) test: (current: 0.4771, best: 0.5382)
-Epoch 34, train: (current: 0.5765, best: 0.6147) valid: (current: 0.5152, best: 0.5640) test: (current: 0.5015, best: 0.5382)
-Epoch 35, train: (current: 0.5918, best: 0.6147) valid: (current: 0.4787, best: 0.5640) test: (current: 0.5138, best: 0.5382)
-Epoch 36, train: (current: 0.5990, best: 0.6147) valid: (current: 0.5396, best: 0.5640) test: (current: 0.4985, best: 0.5382)
-Epoch 37, train: (current: 0.6009, best: 0.6147) valid: (current: 0.5030, best: 0.5640) test: (current: 0.5382, best: 0.5382)
-Epoch 38, train: (current: 0.6059, best: 0.6147) valid: (current: 0.5061, best: 0.5640) test: (current: 0.4893, best: 0.5382)
-Epoch 39, train: (current: 0.5914, best: 0.6147) valid: (current: 0.4970, best: 0.5640) test: (current: 0.4618, best: 0.5382)
-Epoch 40, train: (current: 0.5979, best: 0.6147) valid: (current: 0.5030, best: 0.5640) test: (current: 0.4893, best: 0.5382)
-Epoch 41, train: (current: 0.5899, best: 0.6147) valid: (current: 0.5335, best: 0.5640) test: (current: 0.4771, best: 0.5382)
-Epoch 42, train: (current: 0.5998, best: 0.6147) valid: (current: 0.4939, best: 0.5640) test: (current: 0.5168, best: 0.5382)
-Epoch 43, train: (current: 0.6082, best: 0.6147) valid: (current: 0.5122, best: 0.5640) test: (current: 0.5168, best: 0.5382)
-Epoch 44, train: (current: 0.6032, best: 0.6147) valid: (current: 0.5030, best: 0.5640) test: (current: 0.4985, best: 0.5382)
-Epoch 45, train: (current: 0.6082, best: 0.6147) valid: (current: 0.5305, best: 0.5640) test: (current: 0.5168, best: 0.5382)
-Epoch 46, train: (current: 0.5921, best: 0.6147) valid: (current: 0.5244, best: 0.5640) test: (current: 0.5046, best: 0.5382)
-Epoch 47, train: (current: 0.5837, best: 0.6147) valid: (current: 0.5122, best: 0.5640) test: (current: 0.5076, best: 0.5382)
-Epoch 48, train: (current: 0.6013, best: 0.6147) valid: (current: 0.5274, best: 0.5640) test: (current: 0.5199, best: 0.5382)
-Epoch 49, train: (current: 0.5956, best: 0.6147) valid: (current: 0.5152, best: 0.5640) test: (current: 0.5168, best: 0.5382)
-Epoch 50, train: (current: 0.5879, best: 0.6147) valid: (current: 0.5244, best: 0.5640) test: (current: 0.4954, best: 0.5382)
-Epoch 51, train: (current: 0.5845, best: 0.6147) valid: (current: 0.4817, best: 0.5640) test: (current: 0.5046, best: 0.5382)
-Epoch 52, train: (current: 0.6040, best: 0.6147) valid: (current: 0.5152, best: 0.5640) test: (current: 0.4985, best: 0.5382)
-Epoch 53, train: (current: 0.5921, best: 0.6147) valid: (current: 0.5061, best: 0.5640) test: (current: 0.5168, best: 0.5382)
-Epoch 54, train: (current: 0.6085, best: 0.6147) valid: (current: 0.5244, best: 0.5640) test: (current: 0.5015, best: 0.5382)
-Epoch 55, train: (current: 0.6078, best: 0.6147) valid: (current: 0.5457, best: 0.5640) test: (current: 0.5260, best: 0.5382)
-Epoch 56, train: (current: 0.5910, best: 0.6147) valid: (current: 0.5152, best: 0.5640) test: (current: 0.5352, best: 0.5382)
-Epoch 57, train: (current: 0.6143, best: 0.6147) valid: (current: 0.5091, best: 0.5640) test: (current: 0.4862, best: 0.5382)
-Epoch 58, train: (current: 0.5998, best: 0.6147) valid: (current: 0.5000, best: 0.5640) test: (current: 0.5382, best: 0.5382)
-Epoch 59, train: (current: 0.5952, best: 0.6147) valid: (current: 0.4970, best: 0.5640) test: (current: 0.4985, best: 0.5382)
-Epoch 60, train: (current: 0.6028, best: 0.6147) valid: (current: 0.4787, best: 0.5640) test: (current: 0.4740, best: 0.5382)
-Epoch 61, train: (current: 0.5975, best: 0.6147) valid: (current: 0.5335, best: 0.5640) test: (current: 0.5138, best: 0.5382)
-Epoch 62, train: (current: 0.6097, best: 0.6147) valid: (current: 0.5396, best: 0.5640) test: (current: 0.4924, best: 0.5382)
-Epoch 63, train: (current: 0.5757, best: 0.6147) valid: (current: 0.5000, best: 0.5640) test: (current: 0.4801, best: 0.5382)
-Epoch 64, train: (current: 0.5998, best: 0.6147) valid: (current: 0.5213, best: 0.5640) test: (current: 0.4924, best: 0.5382)
-Epoch 65, train: (current: 0.6131, best: 0.6147) valid: (current: 0.5152, best: 0.5640) test: (current: 0.5291, best: 0.5382)
-Epoch 66, train: (current: 0.6108, best: 0.6147) valid: (current: 0.5152, best: 0.5640) test: (current: 0.5138, best: 0.5382)
-Epoch 67, train: (current: 0.6085, best: 0.6147) valid: (current: 0.4878, best: 0.5640) test: (current: 0.5138, best: 0.5382)
-Epoch 68, train: (current: 0.6097, best: 0.6147) valid: (current: 0.5122, best: 0.5640) test: (current: 0.5168, best: 0.5382)
-Epoch 69, train: (current: 0.6009, best: 0.6147) valid: (current: 0.5030, best: 0.5640) test: (current: 0.5199, best: 0.5382)
-Epoch 70, train: (current: 0.6002, best: 0.6147) valid: (current: 0.5518, best: 0.5640) test: (current: 0.5229, best: 0.5382)
-Epoch 71, train: (current: 0.6135, best: 0.6147) valid: (current: 0.5183, best: 0.5640) test: (current: 0.5413, best: 0.5413)
-Epoch 72, train: (current: 0.6116, best: 0.6147) valid: (current: 0.5213, best: 0.5640) test: (current: 0.5260, best: 0.5413)
-Epoch 73, train: (current: 0.6059, best: 0.6147) valid: (current: 0.5061, best: 0.5640) test: (current: 0.5229, best: 0.5413)
-Epoch 74, train: (current: 0.6078, best: 0.6147) valid: (current: 0.5152, best: 0.5640) test: (current: 0.5076, best: 0.5413)
-Epoch 75, train: (current: 0.6120, best: 0.6147) valid: (current: 0.5061, best: 0.5640) test: (current: 0.5199, best: 0.5413)
-Epoch 76, train: (current: 0.6181, best: 0.6181) valid: (current: 0.4878, best: 0.5640) test: (current: 0.5229, best: 0.5413)
-Epoch 77, train: (current: 0.6154, best: 0.6181) valid: (current: 0.5091, best: 0.5640) test: (current: 0.4862, best: 0.5413)
-Epoch 78, train: (current: 0.5845, best: 0.6181) valid: (current: 0.4909, best: 0.5640) test: (current: 0.5168, best: 0.5413)
-Epoch 79, train: (current: 0.6013, best: 0.6181) valid: (current: 0.4360, best: 0.5640) test: (current: 0.4893, best: 0.5413)
-Epoch 80, train: (current: 0.5921, best: 0.6181) valid: (current: 0.4756, best: 0.5640) test: (current: 0.4985, best: 0.5413)
-Epoch 81, train: (current: 0.5612, best: 0.6181) valid: (current: 0.5091, best: 0.5640) test: (current: 0.4832, best: 0.5413)
-Epoch 82, train: (current: 0.5860, best: 0.6181) valid: (current: 0.4787, best: 0.5640) test: (current: 0.5138, best: 0.5413)
-Epoch 83, train: (current: 0.5971, best: 0.6181) valid: (current: 0.5213, best: 0.5640) test: (current: 0.5321, best: 0.5413)
-Epoch 84, train: (current: 0.6017, best: 0.6181) valid: (current: 0.4909, best: 0.5640) test: (current: 0.5229, best: 0.5413)
-Epoch 85, train: (current: 0.6047, best: 0.6181) valid: (current: 0.4939, best: 0.5640) test: (current: 0.4924, best: 0.5413)
-Epoch 86, train: (current: 0.5921, best: 0.6181) valid: (current: 0.5244, best: 0.5640) test: (current: 0.5229, best: 0.5413)
-Epoch 87, train: (current: 0.5891, best: 0.6181) valid: (current: 0.4573, best: 0.5640) test: (current: 0.4832, best: 0.5413)
-Epoch 88, train: (current: 0.5918, best: 0.6181) valid: (current: 0.5030, best: 0.5640) test: (current: 0.4924, best: 0.5413)
-Epoch 89, train: (current: 0.5948, best: 0.6181) valid: (current: 0.5000, best: 0.5640) test: (current: 0.4985, best: 0.5413)
-Epoch 90, train: (current: 0.6036, best: 0.6181) valid: (current: 0.5213, best: 0.5640) test: (current: 0.5076, best: 0.5413)
-Epoch 91, train: (current: 0.5952, best: 0.6181) valid: (current: 0.5000, best: 0.5640) test: (current: 0.4893, best: 0.5413)
-Epoch 92, train: (current: 0.5902, best: 0.6181) valid: (current: 0.5152, best: 0.5640) test: (current: 0.4954, best: 0.5413)
-Epoch 93, train: (current: 0.6032, best: 0.6181) valid: (current: 0.5122, best: 0.5640) test: (current: 0.5076, best: 0.5413)
-Epoch 94, train: (current: 0.5971, best: 0.6181) valid: (current: 0.4939, best: 0.5640) test: (current: 0.5168, best: 0.5413)
-Epoch 95, train: (current: 0.5849, best: 0.6181) valid: (current: 0.4970, best: 0.5640) test: (current: 0.5321, best: 0.5413)
-Epoch 96, train: (current: 0.6063, best: 0.6181) valid: (current: 0.5152, best: 0.5640) test: (current: 0.4985, best: 0.5413)
-Epoch 97, train: (current: 0.6124, best: 0.6181) valid: (current: 0.5244, best: 0.5640) test: (current: 0.5199, best: 0.5413)
-Epoch 98, train: (current: 0.6032, best: 0.6181) valid: (current: 0.5244, best: 0.5640) test: (current: 0.4954, best: 0.5413)
-Epoch 99, train: (current: 0.6120, best: 0.6181) valid: (current: 0.5061, best: 0.5640) test: (current: 0.5229, best: 0.5413)
-Epoch 100, train: (current: 0.5937, best: 0.6181) valid: (current: 0.5000, best: 0.5640) test: (current: 0.5168, best: 0.5413)
-Epoch 101, train: (current: 0.6055, best: 0.6181) valid: (current: 0.4848, best: 0.5640) test: (current: 0.5015, best: 0.5413)
-Epoch 102, train: (current: 0.6032, best: 0.6181) valid: (current: 0.5061, best: 0.5640) test: (current: 0.5046, best: 0.5413)
-Epoch 103, train: (current: 0.6078, best: 0.6181) valid: (current: 0.5000, best: 0.5640) test: (current: 0.5260, best: 0.5413)
-Epoch 104, train: (current: 0.5982, best: 0.6181) valid: (current: 0.5579, best: 0.5640) test: (current: 0.5107, best: 0.5413)
-Epoch 105, train: (current: 0.6024, best: 0.6181) valid: (current: 0.4848, best: 0.5640) test: (current: 0.5015, best: 0.5413)
-Epoch 106, train: (current: 0.6013, best: 0.6181) valid: (current: 0.5183, best: 0.5640) test: (current: 0.5076, best: 0.5413)
-Epoch 107, train: (current: 0.5960, best: 0.6181) valid: (current: 0.5091, best: 0.5640) test: (current: 0.4985, best: 0.5413)
-Epoch 108, train: (current: 0.5860, best: 0.6181) valid: (current: 0.5122, best: 0.5640) test: (current: 0.5229, best: 0.5413)
-Epoch 109, train: (current: 0.5929, best: 0.6181) valid: (current: 0.4970, best: 0.5640) test: (current: 0.5076, best: 0.5413)
-Epoch 110, train: (current: 0.6120, best: 0.6181) valid: (current: 0.5244, best: 0.5640) test: (current: 0.5291, best: 0.5413)
-Epoch 111, train: (current: 0.5994, best: 0.6181) valid: (current: 0.5091, best: 0.5640) test: (current: 0.5291, best: 0.5413)
-Epoch 112, train: (current: 0.6135, best: 0.6181) valid: (current: 0.4970, best: 0.5640) test: (current: 0.5260, best: 0.5413)
-Epoch 113, train: (current: 0.6055, best: 0.6181) valid: (current: 0.5030, best: 0.5640) test: (current: 0.5352, best: 0.5413)
-Epoch 114, train: (current: 0.5895, best: 0.6181) valid: (current: 0.5213, best: 0.5640) test: (current: 0.4954, best: 0.5413)
-Epoch 115, train: (current: 0.6028, best: 0.6181) valid: (current: 0.5122, best: 0.5640) test: (current: 0.4893, best: 0.5413)
-Epoch 116, train: (current: 0.5960, best: 0.6181) valid: (current: 0.5091, best: 0.5640) test: (current: 0.4893, best: 0.5413)
-Epoch 117, train: (current: 0.5975, best: 0.6181) valid: (current: 0.5274, best: 0.5640) test: (current: 0.5046, best: 0.5413)
-Epoch 118, train: (current: 0.5937, best: 0.6181) valid: (current: 0.5335, best: 0.5640) test: (current: 0.4985, best: 0.5413)
-Epoch 119, train: (current: 0.6047, best: 0.6181) valid: (current: 0.5366, best: 0.5640) test: (current: 0.5168, best: 0.5413)
-Epoch 120, train: (current: 0.6116, best: 0.6181) valid: (current: 0.4878, best: 0.5640) test: (current: 0.5015, best: 0.5413)
-Epoch 121, train: (current: 0.6085, best: 0.6181) valid: (current: 0.5030, best: 0.5640) test: (current: 0.4893, best: 0.5413)
-Epoch 122, train: (current: 0.6127, best: 0.6181) valid: (current: 0.5061, best: 0.5640) test: (current: 0.4985, best: 0.5413)
-Epoch 123, train: (current: 0.5960, best: 0.6181) valid: (current: 0.5335, best: 0.5640) test: (current: 0.4679, best: 0.5413)
-Epoch 124, train: (current: 0.5807, best: 0.6181) valid: (current: 0.5335, best: 0.5640) test: (current: 0.5168, best: 0.5413)
-Epoch 125, train: (current: 0.6028, best: 0.6181) valid: (current: 0.4970, best: 0.5640) test: (current: 0.5046, best: 0.5413)
-Epoch 126, train: (current: 0.6127, best: 0.6181) valid: (current: 0.5305, best: 0.5640) test: (current: 0.5076, best: 0.5413)
-Epoch 127, train: (current: 0.6043, best: 0.6181) valid: (current: 0.5213, best: 0.5640) test: (current: 0.5076, best: 0.5413)
-Epoch 128, train: (current: 0.5998, best: 0.6181) valid: (current: 0.4909, best: 0.5640) test: (current: 0.5138, best: 0.5413)
-Epoch 129, train: (current: 0.5780, best: 0.6181) valid: (current: 0.4939, best: 0.5640) test: (current: 0.4832, best: 0.5413)
-Epoch 130, train: (current: 0.6078, best: 0.6181) valid: (current: 0.5183, best: 0.5640) test: (current: 0.5138, best: 0.5413)
-Epoch 131, train: (current: 0.5952, best: 0.6181) valid: (current: 0.5213, best: 0.5640) test: (current: 0.5046, best: 0.5413)
-Epoch 132, train: (current: 0.6120, best: 0.6181) valid: (current: 0.5030, best: 0.5640) test: (current: 0.4985, best: 0.5413)
-Epoch 133, train: (current: 0.6047, best: 0.6181) valid: (current: 0.5061, best: 0.5640) test: (current: 0.5076, best: 0.5413)
-Epoch 134, train: (current: 0.6093, best: 0.6181) valid: (current: 0.5274, best: 0.5640) test: (current: 0.5229, best: 0.5413)
-Epoch 135, train: (current: 0.6147, best: 0.6181) valid: (current: 0.5152, best: 0.5640) test: (current: 0.5321, best: 0.5413)
-Epoch 136, train: (current: 0.6177, best: 0.6181) valid: (current: 0.5213, best: 0.5640) test: (current: 0.5168, best: 0.5413)
-Epoch 137, train: (current: 0.6120, best: 0.6181) valid: (current: 0.5122, best: 0.5640) test: (current: 0.5046, best: 0.5413)
-Epoch 138, train: (current: 0.6150, best: 0.6181) valid: (current: 0.5152, best: 0.5640) test: (current: 0.5046, best: 0.5413)
-Epoch 139, train: (current: 0.6215, best: 0.6215) valid: (current: 0.5366, best: 0.5640) test: (current: 0.5107, best: 0.5413)
-Epoch 140, train: (current: 0.6097, best: 0.6215) valid: (current: 0.5183, best: 0.5640) test: (current: 0.4862, best: 0.5413)
-Epoch 141, train: (current: 0.6120, best: 0.6215) valid: (current: 0.5061, best: 0.5640) test: (current: 0.4924, best: 0.5413)
-Epoch 142, train: (current: 0.6112, best: 0.6215) valid: (current: 0.5366, best: 0.5640) test: (current: 0.5046, best: 0.5413)
-Epoch 143, train: (current: 0.6040, best: 0.6215) valid: (current: 0.5061, best: 0.5640) test: (current: 0.5168, best: 0.5413)
-Epoch 144, train: (current: 0.6169, best: 0.6215) valid: (current: 0.5030, best: 0.5640) test: (current: 0.5229, best: 0.5413)
-Epoch 145, train: (current: 0.6028, best: 0.6215) valid: (current: 0.5305, best: 0.5640) test: (current: 0.5046, best: 0.5413)
-Epoch 146, train: (current: 0.5948, best: 0.6215) valid: (current: 0.5122, best: 0.5640) test: (current: 0.5015, best: 0.5413)
-Epoch 147, train: (current: 0.5960, best: 0.6215) valid: (current: 0.4848, best: 0.5640) test: (current: 0.4924, best: 0.5413)
-Epoch 148, train: (current: 0.5956, best: 0.6215) valid: (current: 0.5213, best: 0.5640) test: (current: 0.5199, best: 0.5413)
-Epoch 149, train: (current: 0.5979, best: 0.6215) valid: (current: 0.5183, best: 0.5640) test: (current: 0.5168, best: 0.5413)
-Epoch 150, train: (current: 0.5948, best: 0.6215) valid: (current: 0.5274, best: 0.5640) test: (current: 0.4740, best: 0.5413)
-Epoch 151, train: (current: 0.6059, best: 0.6215) valid: (current: 0.5183, best: 0.5640) test: (current: 0.4985, best: 0.5413)
-Epoch 152, train: (current: 0.6051, best: 0.6215) valid: (current: 0.5122, best: 0.5640) test: (current: 0.5229, best: 0.5413)
-Epoch 153, train: (current: 0.5986, best: 0.6215) valid: (current: 0.5213, best: 0.5640) test: (current: 0.4954, best: 0.5413)
-Epoch 154, train: (current: 0.6036, best: 0.6215) valid: (current: 0.5335, best: 0.5640) test: (current: 0.5107, best: 0.5413)
-Epoch 155, train: (current: 0.6089, best: 0.6215) valid: (current: 0.5305, best: 0.5640) test: (current: 0.5138, best: 0.5413)
-Epoch 156, train: (current: 0.6208, best: 0.6215) valid: (current: 0.5091, best: 0.5640) test: (current: 0.5229, best: 0.5413)
-Epoch 157, train: (current: 0.6078, best: 0.6215) valid: (current: 0.5000, best: 0.5640) test: (current: 0.5199, best: 0.5413)
-Epoch 158, train: (current: 0.6040, best: 0.6215) valid: (current: 0.4848, best: 0.5640) test: (current: 0.5199, best: 0.5413)
-Epoch 159, train: (current: 0.6074, best: 0.6215) valid: (current: 0.5183, best: 0.5640) test: (current: 0.5107, best: 0.5413)
-Epoch 160, train: (current: 0.5830, best: 0.6215) valid: (current: 0.5305, best: 0.5640) test: (current: 0.4985, best: 0.5413)
-Epoch 161, train: (current: 0.5982, best: 0.6215) valid: (current: 0.5274, best: 0.5640) test: (current: 0.4924, best: 0.5413)
-Epoch 162, train: (current: 0.6124, best: 0.6215) valid: (current: 0.5152, best: 0.5640) test: (current: 0.5291, best: 0.5413)
-Epoch 163, train: (current: 0.5967, best: 0.6215) valid: (current: 0.4909, best: 0.5640) test: (current: 0.5199, best: 0.5413)
-Epoch 164, train: (current: 0.6021, best: 0.6215) valid: (current: 0.5152, best: 0.5640) test: (current: 0.5076, best: 0.5413)
-Epoch 165, train: (current: 0.6063, best: 0.6215) valid: (current: 0.5061, best: 0.5640) test: (current: 0.5321, best: 0.5413)
-Epoch 166, train: (current: 0.6066, best: 0.6215) valid: (current: 0.5000, best: 0.5640) test: (current: 0.5291, best: 0.5413)
-Epoch 167, train: (current: 0.6097, best: 0.6215) valid: (current: 0.4848, best: 0.5640) test: (current: 0.5229, best: 0.5413)
-Epoch 168, train: (current: 0.5860, best: 0.6215) valid: (current: 0.5305, best: 0.5640) test: (current: 0.5260, best: 0.5413)
-Epoch 169, train: (current: 0.6177, best: 0.6215) valid: (current: 0.5213, best: 0.5640) test: (current: 0.5046, best: 0.5413)
-Epoch 170, train: (current: 0.6059, best: 0.6215) valid: (current: 0.4756, best: 0.5640) test: (current: 0.4862, best: 0.5413)
-Epoch 171, train: (current: 0.6082, best: 0.6215) valid: (current: 0.5274, best: 0.5640) test: (current: 0.4862, best: 0.5413)
-Epoch 172, train: (current: 0.6116, best: 0.6215) valid: (current: 0.5366, best: 0.5640) test: (current: 0.5229, best: 0.5413)
-Epoch 173, train: (current: 0.6112, best: 0.6215) valid: (current: 0.5183, best: 0.5640) test: (current: 0.5107, best: 0.5413)
-Epoch 174, train: (current: 0.6074, best: 0.6215) valid: (current: 0.5274, best: 0.5640) test: (current: 0.5076, best: 0.5413)
-Epoch 175, train: (current: 0.6059, best: 0.6215) valid: (current: 0.4970, best: 0.5640) test: (current: 0.5076, best: 0.5413)
-Epoch 176, train: (current: 0.6002, best: 0.6215) valid: (current: 0.5030, best: 0.5640) test: (current: 0.5168, best: 0.5413)
-Epoch 177, train: (current: 0.5998, best: 0.6215) valid: (current: 0.5122, best: 0.5640) test: (current: 0.5168, best: 0.5413)
-Epoch 178, train: (current: 0.6074, best: 0.6215) valid: (current: 0.5244, best: 0.5640) test: (current: 0.5138, best: 0.5413)
-Epoch 179, train: (current: 0.6101, best: 0.6215) valid: (current: 0.4909, best: 0.5640) test: (current: 0.5076, best: 0.5413)
-Epoch 180, train: (current: 0.6002, best: 0.6215) valid: (current: 0.4695, best: 0.5640) test: (current: 0.4862, best: 0.5413)
-Epoch 181, train: (current: 0.6131, best: 0.6215) valid: (current: 0.5152, best: 0.5640) test: (current: 0.4985, best: 0.5413)
-Epoch 182, train: (current: 0.6002, best: 0.6215) valid: (current: 0.5000, best: 0.5640) test: (current: 0.5260, best: 0.5413)
-Epoch 183, train: (current: 0.5921, best: 0.6215) valid: (current: 0.5335, best: 0.5640) test: (current: 0.5015, best: 0.5413)
-Epoch 184, train: (current: 0.6059, best: 0.6215) valid: (current: 0.5000, best: 0.5640) test: (current: 0.4924, best: 0.5413)
-Epoch 185, train: (current: 0.6070, best: 0.6215) valid: (current: 0.4970, best: 0.5640) test: (current: 0.5535, best: 0.5535)
-Epoch 186, train: (current: 0.5975, best: 0.6215) valid: (current: 0.5183, best: 0.5640) test: (current: 0.4862, best: 0.5535)
-Epoch 187, train: (current: 0.6013, best: 0.6215) valid: (current: 0.5091, best: 0.5640) test: (current: 0.5291, best: 0.5535)
-Epoch 188, train: (current: 0.6105, best: 0.6215) valid: (current: 0.5091, best: 0.5640) test: (current: 0.5107, best: 0.5535)
-Epoch 189, train: (current: 0.5910, best: 0.6215) valid: (current: 0.5244, best: 0.5640) test: (current: 0.4893, best: 0.5535)
-Epoch 190, train: (current: 0.6005, best: 0.6215) valid: (current: 0.5091, best: 0.5640) test: (current: 0.5168, best: 0.5535)
-Epoch 191, train: (current: 0.5979, best: 0.6215) valid: (current: 0.5122, best: 0.5640) test: (current: 0.4954, best: 0.5535)
-Epoch 192, train: (current: 0.6047, best: 0.6215) valid: (current: 0.5488, best: 0.5640) test: (current: 0.4954, best: 0.5535)
-Epoch 193, train: (current: 0.5990, best: 0.6215) valid: (current: 0.5213, best: 0.5640) test: (current: 0.4587, best: 0.5535)
-Epoch 194, train: (current: 0.6021, best: 0.6215) valid: (current: 0.5396, best: 0.5640) test: (current: 0.5382, best: 0.5535)
-Epoch 195, train: (current: 0.6150, best: 0.6215) valid: (current: 0.5701, best: 0.5701) test: (current: 0.5015, best: 0.5535)
-Epoch 196, train: (current: 0.5895, best: 0.6215) valid: (current: 0.5213, best: 0.5701) test: (current: 0.5413, best: 0.5535)
-Epoch 197, train: (current: 0.6116, best: 0.6215) valid: (current: 0.5030, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 198, train: (current: 0.6047, best: 0.6215) valid: (current: 0.5152, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 199, train: (current: 0.6078, best: 0.6215) valid: (current: 0.4634, best: 0.5701) test: (current: 0.5107, best: 0.5535)
-Epoch 200, train: (current: 0.6024, best: 0.6215) valid: (current: 0.5335, best: 0.5701) test: (current: 0.5291, best: 0.5535)
-Epoch 201, train: (current: 0.6043, best: 0.6215) valid: (current: 0.5152, best: 0.5701) test: (current: 0.4832, best: 0.5535)
-Epoch 202, train: (current: 0.6036, best: 0.6215) valid: (current: 0.5244, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 203, train: (current: 0.6131, best: 0.6215) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 204, train: (current: 0.6105, best: 0.6215) valid: (current: 0.5030, best: 0.5701) test: (current: 0.4893, best: 0.5535)
-Epoch 205, train: (current: 0.6253, best: 0.6253) valid: (current: 0.5244, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 206, train: (current: 0.6143, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 207, train: (current: 0.6017, best: 0.6253) valid: (current: 0.5152, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 208, train: (current: 0.5979, best: 0.6253) valid: (current: 0.5244, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 209, train: (current: 0.6169, best: 0.6253) valid: (current: 0.5244, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 210, train: (current: 0.6093, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 211, train: (current: 0.6017, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.4924, best: 0.5535)
-Epoch 212, train: (current: 0.6097, best: 0.6253) valid: (current: 0.4878, best: 0.5701) test: (current: 0.4924, best: 0.5535)
-Epoch 213, train: (current: 0.6070, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.4771, best: 0.5535)
-Epoch 214, train: (current: 0.6085, best: 0.6253) valid: (current: 0.5335, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 215, train: (current: 0.6150, best: 0.6253) valid: (current: 0.5000, best: 0.5701) test: (current: 0.4893, best: 0.5535)
-Epoch 216, train: (current: 0.6085, best: 0.6253) valid: (current: 0.5152, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 217, train: (current: 0.5902, best: 0.6253) valid: (current: 0.4939, best: 0.5701) test: (current: 0.4801, best: 0.5535)
-Epoch 218, train: (current: 0.5876, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 219, train: (current: 0.6002, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.4832, best: 0.5535)
-Epoch 220, train: (current: 0.5929, best: 0.6253) valid: (current: 0.5152, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 221, train: (current: 0.6055, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5321, best: 0.5535)
-Epoch 222, train: (current: 0.5998, best: 0.6253) valid: (current: 0.4848, best: 0.5701) test: (current: 0.5321, best: 0.5535)
-Epoch 223, train: (current: 0.6082, best: 0.6253) valid: (current: 0.5244, best: 0.5701) test: (current: 0.5291, best: 0.5535)
-Epoch 224, train: (current: 0.6196, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 225, train: (current: 0.6166, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 226, train: (current: 0.6024, best: 0.6253) valid: (current: 0.4878, best: 0.5701) test: (current: 0.4985, best: 0.5535)
-Epoch 227, train: (current: 0.6051, best: 0.6253) valid: (current: 0.5152, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 228, train: (current: 0.5982, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 229, train: (current: 0.5979, best: 0.6253) valid: (current: 0.5152, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 230, train: (current: 0.6150, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5291, best: 0.5535)
-Epoch 231, train: (current: 0.5986, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5107, best: 0.5535)
-Epoch 232, train: (current: 0.6093, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 233, train: (current: 0.6036, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 234, train: (current: 0.6120, best: 0.6253) valid: (current: 0.4970, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 235, train: (current: 0.6200, best: 0.6253) valid: (current: 0.5305, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 236, train: (current: 0.6066, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 237, train: (current: 0.6017, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.4924, best: 0.5535)
-Epoch 238, train: (current: 0.6127, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 239, train: (current: 0.6116, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.5443, best: 0.5535)
-Epoch 240, train: (current: 0.6005, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.4862, best: 0.5535)
-Epoch 241, train: (current: 0.6154, best: 0.6253) valid: (current: 0.5000, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 242, train: (current: 0.6154, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.5260, best: 0.5535)
-Epoch 243, train: (current: 0.6070, best: 0.6253) valid: (current: 0.5244, best: 0.5701) test: (current: 0.5382, best: 0.5535)
-Epoch 244, train: (current: 0.6192, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 245, train: (current: 0.6147, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5321, best: 0.5535)
-Epoch 246, train: (current: 0.6127, best: 0.6253) valid: (current: 0.4848, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 247, train: (current: 0.6188, best: 0.6253) valid: (current: 0.4909, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 248, train: (current: 0.6211, best: 0.6253) valid: (current: 0.5152, best: 0.5701) test: (current: 0.5291, best: 0.5535)
-Epoch 249, train: (current: 0.6070, best: 0.6253) valid: (current: 0.5335, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 250, train: (current: 0.6131, best: 0.6253) valid: (current: 0.5244, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 251, train: (current: 0.6105, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.4985, best: 0.5535)
-Epoch 252, train: (current: 0.5975, best: 0.6253) valid: (current: 0.4970, best: 0.5701) test: (current: 0.5291, best: 0.5535)
-Epoch 253, train: (current: 0.6059, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 254, train: (current: 0.6055, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 255, train: (current: 0.6032, best: 0.6253) valid: (current: 0.5244, best: 0.5701) test: (current: 0.4893, best: 0.5535)
-Epoch 256, train: (current: 0.6154, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5107, best: 0.5535)
-Epoch 257, train: (current: 0.6135, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.5107, best: 0.5535)
-Epoch 258, train: (current: 0.6002, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 259, train: (current: 0.6150, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.4801, best: 0.5535)
-Epoch 260, train: (current: 0.6055, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 261, train: (current: 0.6043, best: 0.6253) valid: (current: 0.4939, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 262, train: (current: 0.5994, best: 0.6253) valid: (current: 0.5305, best: 0.5701) test: (current: 0.5352, best: 0.5535)
-Epoch 263, train: (current: 0.5986, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5321, best: 0.5535)
-Epoch 264, train: (current: 0.6177, best: 0.6253) valid: (current: 0.4970, best: 0.5701) test: (current: 0.5260, best: 0.5535)
-Epoch 265, train: (current: 0.6188, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.5291, best: 0.5535)
-Epoch 266, train: (current: 0.6131, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5260, best: 0.5535)
-Epoch 267, train: (current: 0.6230, best: 0.6253) valid: (current: 0.5366, best: 0.5701) test: (current: 0.4954, best: 0.5535)
-Epoch 268, train: (current: 0.6147, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 269, train: (current: 0.6055, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.4924, best: 0.5535)
-Epoch 270, train: (current: 0.6154, best: 0.6253) valid: (current: 0.4878, best: 0.5701) test: (current: 0.5015, best: 0.5535)
-Epoch 271, train: (current: 0.6108, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 272, train: (current: 0.6032, best: 0.6253) valid: (current: 0.5457, best: 0.5701) test: (current: 0.4985, best: 0.5535)
-Epoch 273, train: (current: 0.5994, best: 0.6253) valid: (current: 0.5366, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 274, train: (current: 0.6002, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 275, train: (current: 0.6101, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.4924, best: 0.5535)
-Epoch 276, train: (current: 0.5906, best: 0.6253) valid: (current: 0.5305, best: 0.5701) test: (current: 0.5260, best: 0.5535)
-Epoch 277, train: (current: 0.6055, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.5321, best: 0.5535)
-Epoch 278, train: (current: 0.5944, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.4954, best: 0.5535)
-Epoch 279, train: (current: 0.5944, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 280, train: (current: 0.6059, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 281, train: (current: 0.6047, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.4985, best: 0.5535)
-Epoch 282, train: (current: 0.6089, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5015, best: 0.5535)
-Epoch 283, train: (current: 0.6066, best: 0.6253) valid: (current: 0.5152, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 284, train: (current: 0.6002, best: 0.6253) valid: (current: 0.4970, best: 0.5701) test: (current: 0.4801, best: 0.5535)
-Epoch 285, train: (current: 0.6105, best: 0.6253) valid: (current: 0.5000, best: 0.5701) test: (current: 0.5107, best: 0.5535)
-Epoch 286, train: (current: 0.6108, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 287, train: (current: 0.5998, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.5107, best: 0.5535)
-Epoch 288, train: (current: 0.5982, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 289, train: (current: 0.6135, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5260, best: 0.5535)
-Epoch 290, train: (current: 0.6040, best: 0.6253) valid: (current: 0.4726, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 291, train: (current: 0.5952, best: 0.6253) valid: (current: 0.4909, best: 0.5701) test: (current: 0.5015, best: 0.5535)
-Epoch 292, train: (current: 0.6085, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.4954, best: 0.5535)
-Epoch 293, train: (current: 0.6024, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 294, train: (current: 0.6082, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5474, best: 0.5535)
-Epoch 295, train: (current: 0.6063, best: 0.6253) valid: (current: 0.4878, best: 0.5701) test: (current: 0.5413, best: 0.5535)
-Epoch 296, train: (current: 0.6112, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.4954, best: 0.5535)
-Epoch 297, train: (current: 0.6028, best: 0.6253) valid: (current: 0.5366, best: 0.5701) test: (current: 0.4924, best: 0.5535)
-Epoch 298, train: (current: 0.6185, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5413, best: 0.5535)
-Epoch 299, train: (current: 0.6181, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 300, train: (current: 0.6009, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.5015, best: 0.5535)
-Epoch 301, train: (current: 0.5994, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.5015, best: 0.5535)
-Epoch 302, train: (current: 0.6181, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.4801, best: 0.5535)
-Epoch 303, train: (current: 0.5998, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5291, best: 0.5535)
-Epoch 304, train: (current: 0.6089, best: 0.6253) valid: (current: 0.5000, best: 0.5701) test: (current: 0.5352, best: 0.5535)
-Epoch 305, train: (current: 0.6101, best: 0.6253) valid: (current: 0.5244, best: 0.5701) test: (current: 0.5107, best: 0.5535)
-Epoch 306, train: (current: 0.5990, best: 0.6253) valid: (current: 0.5518, best: 0.5701) test: (current: 0.4862, best: 0.5535)
-Epoch 307, train: (current: 0.6089, best: 0.6253) valid: (current: 0.4970, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 308, train: (current: 0.6040, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 309, train: (current: 0.5982, best: 0.6253) valid: (current: 0.4848, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 310, train: (current: 0.6105, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 311, train: (current: 0.6036, best: 0.6253) valid: (current: 0.5000, best: 0.5701) test: (current: 0.5291, best: 0.5535)
-Epoch 312, train: (current: 0.6043, best: 0.6253) valid: (current: 0.4817, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 313, train: (current: 0.6040, best: 0.6253) valid: (current: 0.5305, best: 0.5701) test: (current: 0.5260, best: 0.5535)
-Epoch 314, train: (current: 0.6043, best: 0.6253) valid: (current: 0.5366, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 315, train: (current: 0.6028, best: 0.6253) valid: (current: 0.4726, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 316, train: (current: 0.5933, best: 0.6253) valid: (current: 0.4817, best: 0.5701) test: (current: 0.4985, best: 0.5535)
-Epoch 317, train: (current: 0.6192, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 318, train: (current: 0.6120, best: 0.6253) valid: (current: 0.5335, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 319, train: (current: 0.6063, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.5291, best: 0.5535)
-Epoch 320, train: (current: 0.6143, best: 0.6253) valid: (current: 0.4878, best: 0.5701) test: (current: 0.4924, best: 0.5535)
-Epoch 321, train: (current: 0.5899, best: 0.6253) valid: (current: 0.4787, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 322, train: (current: 0.6059, best: 0.6253) valid: (current: 0.4848, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 323, train: (current: 0.5952, best: 0.6253) valid: (current: 0.5000, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 324, train: (current: 0.6166, best: 0.6253) valid: (current: 0.5152, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 325, train: (current: 0.6147, best: 0.6253) valid: (current: 0.4848, best: 0.5701) test: (current: 0.5321, best: 0.5535)
-Epoch 326, train: (current: 0.6116, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 327, train: (current: 0.6028, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 328, train: (current: 0.6127, best: 0.6253) valid: (current: 0.5335, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 329, train: (current: 0.6032, best: 0.6253) valid: (current: 0.5335, best: 0.5701) test: (current: 0.4893, best: 0.5535)
-Epoch 330, train: (current: 0.6070, best: 0.6253) valid: (current: 0.4817, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 331, train: (current: 0.5956, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 332, train: (current: 0.5899, best: 0.6253) valid: (current: 0.4848, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 333, train: (current: 0.5986, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5107, best: 0.5535)
-Epoch 334, train: (current: 0.5872, best: 0.6253) valid: (current: 0.4756, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 335, train: (current: 0.6158, best: 0.6253) valid: (current: 0.5000, best: 0.5701) test: (current: 0.5107, best: 0.5535)
-Epoch 336, train: (current: 0.6070, best: 0.6253) valid: (current: 0.4970, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 337, train: (current: 0.6154, best: 0.6253) valid: (current: 0.4970, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 338, train: (current: 0.6108, best: 0.6253) valid: (current: 0.4939, best: 0.5701) test: (current: 0.4924, best: 0.5535)
-Epoch 339, train: (current: 0.6051, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.5291, best: 0.5535)
-Epoch 340, train: (current: 0.5986, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.5015, best: 0.5535)
-Epoch 341, train: (current: 0.6127, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 342, train: (current: 0.6108, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 343, train: (current: 0.6200, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 344, train: (current: 0.6116, best: 0.6253) valid: (current: 0.5152, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 345, train: (current: 0.6032, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 346, train: (current: 0.6131, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.4924, best: 0.5535)
-Epoch 347, train: (current: 0.6112, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.4832, best: 0.5535)
-Epoch 348, train: (current: 0.6192, best: 0.6253) valid: (current: 0.4939, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 349, train: (current: 0.6169, best: 0.6253) valid: (current: 0.4939, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 350, train: (current: 0.6124, best: 0.6253) valid: (current: 0.5152, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 351, train: (current: 0.6150, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 352, train: (current: 0.6085, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.5352, best: 0.5535)
-Epoch 353, train: (current: 0.6131, best: 0.6253) valid: (current: 0.4939, best: 0.5701) test: (current: 0.5260, best: 0.5535)
-Epoch 354, train: (current: 0.6116, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.4924, best: 0.5535)
-Epoch 355, train: (current: 0.6131, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5260, best: 0.5535)
-Epoch 356, train: (current: 0.6047, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 357, train: (current: 0.6139, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 358, train: (current: 0.6108, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.5505, best: 0.5535)
-Epoch 359, train: (current: 0.6131, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.4985, best: 0.5535)
-Epoch 360, train: (current: 0.6127, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 361, train: (current: 0.6188, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 362, train: (current: 0.6120, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5015, best: 0.5535)
-Epoch 363, train: (current: 0.6150, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 364, train: (current: 0.6101, best: 0.6253) valid: (current: 0.4970, best: 0.5701) test: (current: 0.4832, best: 0.5535)
-Epoch 365, train: (current: 0.6143, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 366, train: (current: 0.6181, best: 0.6253) valid: (current: 0.5000, best: 0.5701) test: (current: 0.4832, best: 0.5535)
-Epoch 367, train: (current: 0.5948, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 368, train: (current: 0.6089, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 369, train: (current: 0.6085, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 370, train: (current: 0.6169, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5015, best: 0.5535)
-Epoch 371, train: (current: 0.6063, best: 0.6253) valid: (current: 0.5244, best: 0.5701) test: (current: 0.4985, best: 0.5535)
-Epoch 372, train: (current: 0.5929, best: 0.6253) valid: (current: 0.5457, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 373, train: (current: 0.6162, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.5107, best: 0.5535)
-Epoch 374, train: (current: 0.6177, best: 0.6253) valid: (current: 0.4970, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 375, train: (current: 0.6101, best: 0.6253) valid: (current: 0.4909, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 376, train: (current: 0.6147, best: 0.6253) valid: (current: 0.5518, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 377, train: (current: 0.6158, best: 0.6253) valid: (current: 0.5305, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 378, train: (current: 0.5960, best: 0.6253) valid: (current: 0.5366, best: 0.5701) test: (current: 0.5260, best: 0.5535)
-Epoch 379, train: (current: 0.6059, best: 0.6253) valid: (current: 0.4695, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 380, train: (current: 0.6017, best: 0.6253) valid: (current: 0.4848, best: 0.5701) test: (current: 0.4954, best: 0.5535)
-Epoch 381, train: (current: 0.6169, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 382, train: (current: 0.5910, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 383, train: (current: 0.6070, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.5352, best: 0.5535)
-Epoch 384, train: (current: 0.6204, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5015, best: 0.5535)
-Epoch 385, train: (current: 0.6093, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 386, train: (current: 0.6150, best: 0.6253) valid: (current: 0.5427, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 387, train: (current: 0.6211, best: 0.6253) valid: (current: 0.4970, best: 0.5701) test: (current: 0.4954, best: 0.5535)
-Epoch 388, train: (current: 0.6063, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.5260, best: 0.5535)
-Epoch 389, train: (current: 0.6108, best: 0.6253) valid: (current: 0.5000, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 390, train: (current: 0.6085, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5260, best: 0.5535)
-Epoch 391, train: (current: 0.6089, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 392, train: (current: 0.6127, best: 0.6253) valid: (current: 0.5244, best: 0.5701) test: (current: 0.5015, best: 0.5535)
-Epoch 393, train: (current: 0.6070, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.4924, best: 0.5535)
-Epoch 394, train: (current: 0.6124, best: 0.6253) valid: (current: 0.4909, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 395, train: (current: 0.5910, best: 0.6253) valid: (current: 0.5396, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 396, train: (current: 0.6074, best: 0.6253) valid: (current: 0.5152, best: 0.5701) test: (current: 0.5107, best: 0.5535)
-Epoch 397, train: (current: 0.5952, best: 0.6253) valid: (current: 0.4970, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 398, train: (current: 0.6078, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 399, train: (current: 0.6124, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 400, train: (current: 0.6051, best: 0.6253) valid: (current: 0.5244, best: 0.5701) test: (current: 0.5107, best: 0.5535)
-Epoch 401, train: (current: 0.6085, best: 0.6253) valid: (current: 0.4939, best: 0.5701) test: (current: 0.5413, best: 0.5535)
-Epoch 402, train: (current: 0.6116, best: 0.6253) valid: (current: 0.5000, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 403, train: (current: 0.6112, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.5352, best: 0.5535)
-Epoch 404, train: (current: 0.6074, best: 0.6253) valid: (current: 0.4970, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 405, train: (current: 0.6024, best: 0.6253) valid: (current: 0.5305, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 406, train: (current: 0.6040, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 407, train: (current: 0.6097, best: 0.6253) valid: (current: 0.4878, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 408, train: (current: 0.5979, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 409, train: (current: 0.6089, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 410, train: (current: 0.6147, best: 0.6253) valid: (current: 0.5335, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 411, train: (current: 0.5944, best: 0.6253) valid: (current: 0.4939, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 412, train: (current: 0.6036, best: 0.6253) valid: (current: 0.5305, best: 0.5701) test: (current: 0.4954, best: 0.5535)
-Epoch 413, train: (current: 0.6055, best: 0.6253) valid: (current: 0.5335, best: 0.5701) test: (current: 0.5015, best: 0.5535)
-Epoch 414, train: (current: 0.6063, best: 0.6253) valid: (current: 0.4726, best: 0.5701) test: (current: 0.5443, best: 0.5535)
-Epoch 415, train: (current: 0.5761, best: 0.6253) valid: (current: 0.4787, best: 0.5701) test: (current: 0.5321, best: 0.5535)
-Epoch 416, train: (current: 0.5982, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 417, train: (current: 0.6009, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.4985, best: 0.5535)
-Epoch 418, train: (current: 0.5979, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 419, train: (current: 0.6120, best: 0.6253) valid: (current: 0.5427, best: 0.5701) test: (current: 0.4954, best: 0.5535)
-Epoch 420, train: (current: 0.6047, best: 0.6253) valid: (current: 0.4878, best: 0.5701) test: (current: 0.4893, best: 0.5535)
-Epoch 421, train: (current: 0.6051, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.5321, best: 0.5535)
-Epoch 422, train: (current: 0.5963, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 423, train: (current: 0.6051, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.4740, best: 0.5535)
-Epoch 424, train: (current: 0.6055, best: 0.6253) valid: (current: 0.4970, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 425, train: (current: 0.5956, best: 0.6253) valid: (current: 0.5366, best: 0.5701) test: (current: 0.4771, best: 0.5535)
-Epoch 426, train: (current: 0.6085, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.4954, best: 0.5535)
-Epoch 427, train: (current: 0.6085, best: 0.6253) valid: (current: 0.5335, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 428, train: (current: 0.6188, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 429, train: (current: 0.6127, best: 0.6253) valid: (current: 0.5244, best: 0.5701) test: (current: 0.4924, best: 0.5535)
-Epoch 430, train: (current: 0.6105, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 431, train: (current: 0.6150, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 432, train: (current: 0.6120, best: 0.6253) valid: (current: 0.5396, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 433, train: (current: 0.6097, best: 0.6253) valid: (current: 0.4939, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 434, train: (current: 0.6047, best: 0.6253) valid: (current: 0.4970, best: 0.5701) test: (current: 0.5015, best: 0.5535)
-Epoch 435, train: (current: 0.6101, best: 0.6253) valid: (current: 0.5427, best: 0.5701) test: (current: 0.5260, best: 0.5535)
-Epoch 436, train: (current: 0.6043, best: 0.6253) valid: (current: 0.5518, best: 0.5701) test: (current: 0.5291, best: 0.5535)
-Epoch 437, train: (current: 0.6036, best: 0.6253) valid: (current: 0.5457, best: 0.5701) test: (current: 0.4985, best: 0.5535)
-Epoch 438, train: (current: 0.6173, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 439, train: (current: 0.6112, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.5260, best: 0.5535)
-Epoch 440, train: (current: 0.6017, best: 0.6253) valid: (current: 0.5335, best: 0.5701) test: (current: 0.5474, best: 0.5535)
-Epoch 441, train: (current: 0.6135, best: 0.6253) valid: (current: 0.5000, best: 0.5701) test: (current: 0.5107, best: 0.5535)
-Epoch 442, train: (current: 0.6040, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.4862, best: 0.5535)
-Epoch 443, train: (current: 0.6047, best: 0.6253) valid: (current: 0.5335, best: 0.5701) test: (current: 0.5505, best: 0.5535)
-Epoch 444, train: (current: 0.5982, best: 0.6253) valid: (current: 0.4848, best: 0.5701) test: (current: 0.5291, best: 0.5535)
-Epoch 445, train: (current: 0.5872, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.4924, best: 0.5535)
-Epoch 446, train: (current: 0.6043, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.5107, best: 0.5535)
-Epoch 447, train: (current: 0.6131, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5321, best: 0.5535)
-Epoch 448, train: (current: 0.5971, best: 0.6253) valid: (current: 0.4878, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 449, train: (current: 0.6120, best: 0.6253) valid: (current: 0.5305, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 450, train: (current: 0.5948, best: 0.6253) valid: (current: 0.5152, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 451, train: (current: 0.5925, best: 0.6253) valid: (current: 0.5366, best: 0.5701) test: (current: 0.4954, best: 0.5535)
-Epoch 452, train: (current: 0.6009, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 453, train: (current: 0.6116, best: 0.6253) valid: (current: 0.4909, best: 0.5701) test: (current: 0.5352, best: 0.5535)
-Epoch 454, train: (current: 0.5994, best: 0.6253) valid: (current: 0.5457, best: 0.5701) test: (current: 0.4893, best: 0.5535)
-Epoch 455, train: (current: 0.5963, best: 0.6253) valid: (current: 0.5000, best: 0.5701) test: (current: 0.5107, best: 0.5535)
-Epoch 456, train: (current: 0.5940, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5352, best: 0.5535)
-Epoch 457, train: (current: 0.5948, best: 0.6253) valid: (current: 0.4817, best: 0.5701) test: (current: 0.4893, best: 0.5535)
-Epoch 458, train: (current: 0.6093, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.5260, best: 0.5535)
-Epoch 459, train: (current: 0.6177, best: 0.6253) valid: (current: 0.5244, best: 0.5701) test: (current: 0.5291, best: 0.5535)
-Epoch 460, train: (current: 0.6162, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.4954, best: 0.5535)
-Epoch 461, train: (current: 0.6040, best: 0.6253) valid: (current: 0.4939, best: 0.5701) test: (current: 0.5291, best: 0.5535)
-Epoch 462, train: (current: 0.6013, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 463, train: (current: 0.6074, best: 0.6253) valid: (current: 0.5000, best: 0.5701) test: (current: 0.5015, best: 0.5535)
-Epoch 464, train: (current: 0.6089, best: 0.6253) valid: (current: 0.5335, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 465, train: (current: 0.6135, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.5535, best: 0.5535)
-Epoch 466, train: (current: 0.6024, best: 0.6253) valid: (current: 0.5396, best: 0.5701) test: (current: 0.5352, best: 0.5535)
-Epoch 467, train: (current: 0.6063, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 468, train: (current: 0.5933, best: 0.6253) valid: (current: 0.4909, best: 0.5701) test: (current: 0.4985, best: 0.5535)
-Epoch 469, train: (current: 0.6139, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 470, train: (current: 0.6063, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 471, train: (current: 0.6024, best: 0.6253) valid: (current: 0.4939, best: 0.5701) test: (current: 0.4893, best: 0.5535)
-Epoch 472, train: (current: 0.6028, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.4924, best: 0.5535)
-Epoch 473, train: (current: 0.6055, best: 0.6253) valid: (current: 0.4878, best: 0.5701) test: (current: 0.5413, best: 0.5535)
-Epoch 474, train: (current: 0.5872, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.5260, best: 0.5535)
-Epoch 475, train: (current: 0.6082, best: 0.6253) valid: (current: 0.5152, best: 0.5701) test: (current: 0.4924, best: 0.5535)
-Epoch 476, train: (current: 0.6051, best: 0.6253) valid: (current: 0.5366, best: 0.5701) test: (current: 0.4862, best: 0.5535)
-Epoch 477, train: (current: 0.6009, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5107, best: 0.5535)
-Epoch 478, train: (current: 0.6013, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 479, train: (current: 0.6082, best: 0.6253) valid: (current: 0.5274, best: 0.5701) test: (current: 0.5076, best: 0.5535)
-Epoch 480, train: (current: 0.6177, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 481, train: (current: 0.6040, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.5199, best: 0.5535)
-Epoch 482, train: (current: 0.6021, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.5260, best: 0.5535)
-Epoch 483, train: (current: 0.5982, best: 0.6253) valid: (current: 0.4817, best: 0.5701) test: (current: 0.4709, best: 0.5535)
-Epoch 484, train: (current: 0.5979, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 485, train: (current: 0.6024, best: 0.6253) valid: (current: 0.4939, best: 0.5701) test: (current: 0.5260, best: 0.5535)
-Epoch 486, train: (current: 0.6108, best: 0.6253) valid: (current: 0.5152, best: 0.5701) test: (current: 0.4954, best: 0.5535)
-Epoch 487, train: (current: 0.6070, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 488, train: (current: 0.5899, best: 0.6253) valid: (current: 0.4939, best: 0.5701) test: (current: 0.5352, best: 0.5535)
-Epoch 489, train: (current: 0.6105, best: 0.6253) valid: (current: 0.5061, best: 0.5701) test: (current: 0.5505, best: 0.5535)
-Epoch 490, train: (current: 0.6078, best: 0.6253) valid: (current: 0.5518, best: 0.5701) test: (current: 0.5229, best: 0.5535)
-Epoch 491, train: (current: 0.5971, best: 0.6253) valid: (current: 0.5183, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 492, train: (current: 0.6177, best: 0.6253) valid: (current: 0.5000, best: 0.5701) test: (current: 0.5321, best: 0.5535)
-Epoch 493, train: (current: 0.6173, best: 0.6253) valid: (current: 0.5213, best: 0.5701) test: (current: 0.5138, best: 0.5535)
-Epoch 494, train: (current: 0.6158, best: 0.6253) valid: (current: 0.5122, best: 0.5701) test: (current: 0.5352, best: 0.5535)
-Epoch 495, train: (current: 0.6089, best: 0.6253) valid: (current: 0.5244, best: 0.5701) test: (current: 0.5168, best: 0.5535)
-Epoch 496, train: (current: 0.6043, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5291, best: 0.5535)
-Epoch 497, train: (current: 0.6166, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5046, best: 0.5535)
-Epoch 498, train: (current: 0.6234, best: 0.6253) valid: (current: 0.5030, best: 0.5701) test: (current: 0.5107, best: 0.5535)
-Epoch 499, train: (current: 0.6093, best: 0.6253) valid: (current: 0.5091, best: 0.5701) test: (current: 0.5352, best: 0.5535)
+Epoch 0, train: 0.5128/0.5128, valid: 0.5457/0.5457 test: 0.4862/0.4862
+Epoch 1, train: 0.4605/0.5128, valid: 0.5122/0.5457 test: 0.5352/0.5352
+Epoch 2, train: 0.4876/0.5128, valid: 0.5122/0.5457 test: 0.4893/0.5352
+Epoch 3, train: 0.5738/0.5738, valid: 0.4756/0.5457 test: 0.5168/0.5352
+Epoch 4, train: 0.5883/0.5883, valid: 0.5518/0.5518 test: 0.4862/0.5352
+Epoch 5, train: 0.5944/0.5944, valid: 0.5061/0.5518 test: 0.4771/0.5352
+Epoch 6, train: 0.5754/0.5944, valid: 0.5274/0.5518 test: 0.4862/0.5352
+Epoch 7, train: 0.6013/0.6013, valid: 0.5091/0.5518 test: 0.4985/0.5352
+Epoch 8, train: 0.6074/0.6074, valid: 0.5244/0.5518 test: 0.5107/0.5352
+Epoch 9, train: 0.5952/0.6074, valid: 0.5122/0.5518 test: 0.5138/0.5352
+Epoch 10, train: 0.5990/0.6074, valid: 0.4909/0.5518 test: 0.5229/0.5352
+Epoch 11, train: 0.5944/0.6074, valid: 0.5183/0.5518 test: 0.5046/0.5352
+Epoch 12, train: 0.6002/0.6074, valid: 0.4878/0.5518 test: 0.4985/0.5352
+Epoch 13, train: 0.6196/0.6196, valid: 0.5213/0.5518 test: 0.5352/0.5352
+Epoch 14, train: 0.6055/0.6196, valid: 0.5122/0.5518 test: 0.5107/0.5352
+Epoch 15, train: 0.6066/0.6196, valid: 0.4756/0.5518 test: 0.5199/0.5352
+Epoch 16, train: 0.6097/0.6196, valid: 0.5274/0.5518 test: 0.5291/0.5352
+Epoch 17, train: 0.6066/0.6196, valid: 0.5183/0.5518 test: 0.4954/0.5352
+Epoch 18, train: 0.6139/0.6196, valid: 0.5030/0.5518 test: 0.5413/0.5413
+Epoch 19, train: 0.6047/0.6196, valid: 0.5030/0.5518 test: 0.5321/0.5413
+Epoch 20, train: 0.6158/0.6196, valid: 0.5000/0.5518 test: 0.5382/0.5413
+Epoch 21, train: 0.6116/0.6196, valid: 0.5335/0.5518 test: 0.5046/0.5413
+Epoch 22, train: 0.5921/0.6196, valid: 0.4970/0.5518 test: 0.5107/0.5413
+Epoch 23, train: 0.6120/0.6196, valid: 0.4970/0.5518 test: 0.5138/0.5413
+Epoch 24, train: 0.6070/0.6196, valid: 0.5152/0.5518 test: 0.5107/0.5413
+Epoch 25, train: 0.5929/0.6196, valid: 0.5030/0.5518 test: 0.5229/0.5413
+Epoch 26, train: 0.6066/0.6196, valid: 0.5061/0.5518 test: 0.5199/0.5413
+Epoch 27, train: 0.5982/0.6196, valid: 0.5213/0.5518 test: 0.4801/0.5413
+Epoch 28, train: 0.6040/0.6196, valid: 0.5122/0.5518 test: 0.4924/0.5413
+Epoch 29, train: 0.6063/0.6196, valid: 0.4970/0.5518 test: 0.5229/0.5413
+Epoch 30, train: 0.6120/0.6196, valid: 0.5274/0.5518 test: 0.4893/0.5413
+Epoch 31, train: 0.5845/0.6196, valid: 0.5152/0.5518 test: 0.5443/0.5443
+Epoch 32, train: 0.5780/0.6196, valid: 0.4634/0.5518 test: 0.4954/0.5443
+Epoch 33, train: 0.5921/0.6196, valid: 0.5457/0.5518 test: 0.4924/0.5443
+Epoch 34, train: 0.6131/0.6196, valid: 0.5000/0.5518 test: 0.5076/0.5443
+Epoch 35, train: 0.6059/0.6196, valid: 0.4848/0.5518 test: 0.5076/0.5443
+Epoch 36, train: 0.5723/0.6196, valid: 0.5183/0.5518 test: 0.5107/0.5443
+Epoch 37, train: 0.5899/0.6196, valid: 0.5427/0.5518 test: 0.5352/0.5443
+Epoch 38, train: 0.5952/0.6196, valid: 0.4970/0.5518 test: 0.4709/0.5443
+Epoch 39, train: 0.6143/0.6196, valid: 0.5183/0.5518 test: 0.5046/0.5443
+Epoch 40, train: 0.5975/0.6196, valid: 0.4756/0.5518 test: 0.5138/0.5443
+Epoch 41, train: 0.5952/0.6196, valid: 0.5366/0.5518 test: 0.5321/0.5443
+Epoch 42, train: 0.5963/0.6196, valid: 0.5091/0.5518 test: 0.4954/0.5443
+Epoch 43, train: 0.5895/0.6196, valid: 0.5335/0.5518 test: 0.5260/0.5443
+Epoch 44, train: 0.5956/0.6196, valid: 0.4970/0.5518 test: 0.5291/0.5443
+Epoch 45, train: 0.6047/0.6196, valid: 0.5213/0.5518 test: 0.4985/0.5443
+Epoch 46, train: 0.6047/0.6196, valid: 0.5152/0.5518 test: 0.5321/0.5443
+Epoch 47, train: 0.5986/0.6196, valid: 0.5152/0.5518 test: 0.5291/0.5443
+Epoch 48, train: 0.5940/0.6196, valid: 0.5122/0.5518 test: 0.5168/0.5443
+Epoch 49, train: 0.6093/0.6196, valid: 0.5000/0.5518 test: 0.4985/0.5443
+Epoch 50, train: 0.6101/0.6196, valid: 0.5183/0.5518 test: 0.5076/0.5443
+Epoch 51, train: 0.6028/0.6196, valid: 0.4909/0.5518 test: 0.5260/0.5443
+Epoch 52, train: 0.6070/0.6196, valid: 0.5457/0.5518 test: 0.5382/0.5443
+Epoch 53, train: 0.6017/0.6196, valid: 0.5396/0.5518 test: 0.5076/0.5443
+Epoch 54, train: 0.5986/0.6196, valid: 0.4909/0.5518 test: 0.4832/0.5443
+Epoch 55, train: 0.6024/0.6196, valid: 0.5152/0.5518 test: 0.5138/0.5443
+Epoch 56, train: 0.5998/0.6196, valid: 0.5274/0.5518 test: 0.5046/0.5443
+Epoch 57, train: 0.6032/0.6196, valid: 0.5274/0.5518 test: 0.5138/0.5443
+Epoch 58, train: 0.6124/0.6196, valid: 0.5152/0.5518 test: 0.5321/0.5443
+Epoch 59, train: 0.6040/0.6196, valid: 0.5244/0.5518 test: 0.5321/0.5443
+Epoch 60, train: 0.6154/0.6196, valid: 0.5152/0.5518 test: 0.5015/0.5443
+Epoch 61, train: 0.6013/0.6196, valid: 0.4970/0.5518 test: 0.5138/0.5443
+Epoch 62, train: 0.5990/0.6196, valid: 0.5030/0.5518 test: 0.5199/0.5443
+Epoch 63, train: 0.5986/0.6196, valid: 0.5244/0.5518 test: 0.5260/0.5443
+Epoch 64, train: 0.6093/0.6196, valid: 0.5030/0.5518 test: 0.5107/0.5443
+Epoch 65, train: 0.6120/0.6196, valid: 0.5244/0.5518 test: 0.5260/0.5443
+Epoch 66, train: 0.5956/0.6196, valid: 0.5152/0.5518 test: 0.5352/0.5443
+Epoch 67, train: 0.6089/0.6196, valid: 0.4939/0.5518 test: 0.5046/0.5443
+Epoch 68, train: 0.6085/0.6196, valid: 0.5335/0.5518 test: 0.5474/0.5474
+Epoch 69, train: 0.5990/0.6196, valid: 0.5030/0.5518 test: 0.5199/0.5474
+Epoch 70, train: 0.5929/0.6196, valid: 0.5061/0.5518 test: 0.5107/0.5474
+Epoch 71, train: 0.5937/0.6196, valid: 0.5122/0.5518 test: 0.4801/0.5474
+Epoch 72, train: 0.5937/0.6196, valid: 0.4909/0.5518 test: 0.5046/0.5474
+Epoch 73, train: 0.5822/0.6196, valid: 0.5091/0.5518 test: 0.5046/0.5474
+Epoch 74, train: 0.5986/0.6196, valid: 0.5274/0.5518 test: 0.4832/0.5474
+Epoch 75, train: 0.6040/0.6196, valid: 0.5152/0.5518 test: 0.5138/0.5474
+Epoch 76, train: 0.6063/0.6196, valid: 0.4848/0.5518 test: 0.5321/0.5474
+Epoch 77, train: 0.5910/0.6196, valid: 0.5640/0.5640 test: 0.4954/0.5474
+Epoch 78, train: 0.5830/0.6196, valid: 0.5091/0.5640 test: 0.4771/0.5474
+Epoch 79, train: 0.5849/0.6196, valid: 0.4848/0.5640 test: 0.5382/0.5474
+Epoch 80, train: 0.5872/0.6196, valid: 0.5396/0.5640 test: 0.4954/0.5474
+Epoch 81, train: 0.5853/0.6196, valid: 0.4939/0.5640 test: 0.5413/0.5474
+Epoch 82, train: 0.5986/0.6196, valid: 0.5244/0.5640 test: 0.5199/0.5474
+Epoch 83, train: 0.5967/0.6196, valid: 0.4939/0.5640 test: 0.5413/0.5474
+Epoch 84, train: 0.5918/0.6196, valid: 0.5122/0.5640 test: 0.5138/0.5474
+Epoch 85, train: 0.6009/0.6196, valid: 0.5305/0.5640 test: 0.5138/0.5474
+Epoch 86, train: 0.5857/0.6196, valid: 0.4939/0.5640 test: 0.4924/0.5474
+Epoch 87, train: 0.5864/0.6196, valid: 0.4909/0.5640 test: 0.4924/0.5474
+Epoch 88, train: 0.5807/0.6196, valid: 0.5427/0.5640 test: 0.5046/0.5474
+Epoch 89, train: 0.6070/0.6196, valid: 0.5030/0.5640 test: 0.5199/0.5474
+Epoch 90, train: 0.5746/0.6196, valid: 0.4756/0.5640 test: 0.5382/0.5474
+Epoch 91, train: 0.5956/0.6196, valid: 0.5152/0.5640 test: 0.5015/0.5474
+Epoch 92, train: 0.5979/0.6196, valid: 0.5396/0.5640 test: 0.4862/0.5474
+Epoch 93, train: 0.5948/0.6196, valid: 0.5427/0.5640 test: 0.5260/0.5474
+Epoch 94, train: 0.5906/0.6196, valid: 0.5000/0.5640 test: 0.5168/0.5474
+Epoch 95, train: 0.5956/0.6196, valid: 0.5030/0.5640 test: 0.5382/0.5474
+Epoch 96, train: 0.5940/0.6196, valid: 0.5122/0.5640 test: 0.4771/0.5474
+Epoch 97, train: 0.5925/0.6196, valid: 0.5335/0.5640 test: 0.5291/0.5474
+Epoch 98, train: 0.5990/0.6196, valid: 0.5213/0.5640 test: 0.5046/0.5474
+Epoch 99, train: 0.6009/0.6196, valid: 0.5305/0.5640 test: 0.5046/0.5474
+Epoch 100, train: 0.5853/0.6196, valid: 0.5030/0.5640 test: 0.5107/0.5474
+Epoch 101, train: 0.5879/0.6196, valid: 0.5183/0.5640 test: 0.4832/0.5474
+Epoch 102, train: 0.5906/0.6196, valid: 0.5366/0.5640 test: 0.5382/0.5474
+Epoch 103, train: 0.6013/0.6196, valid: 0.5061/0.5640 test: 0.4924/0.5474
+Epoch 104, train: 0.6032/0.6196, valid: 0.5366/0.5640 test: 0.4862/0.5474
+Epoch 105, train: 0.5982/0.6196, valid: 0.5427/0.5640 test: 0.5321/0.5474
+Epoch 106, train: 0.5883/0.6196, valid: 0.5000/0.5640 test: 0.4771/0.5474
+Epoch 107, train: 0.5841/0.6196, valid: 0.5488/0.5640 test: 0.5046/0.5474
+Epoch 108, train: 0.5994/0.6196, valid: 0.5000/0.5640 test: 0.5291/0.5474
+Epoch 109, train: 0.6043/0.6196, valid: 0.4909/0.5640 test: 0.5321/0.5474
+Epoch 110, train: 0.6005/0.6196, valid: 0.5244/0.5640 test: 0.5138/0.5474
+Epoch 111, train: 0.5982/0.6196, valid: 0.4878/0.5640 test: 0.5321/0.5474
+Epoch 112, train: 0.6043/0.6196, valid: 0.5213/0.5640 test: 0.4893/0.5474
+Epoch 113, train: 0.5952/0.6196, valid: 0.5244/0.5640 test: 0.5229/0.5474
+Epoch 114, train: 0.5811/0.6196, valid: 0.5244/0.5640 test: 0.5046/0.5474
+Epoch 115, train: 0.5486/0.6196, valid: 0.5213/0.5640 test: 0.5107/0.5474
+Epoch 116, train: 0.5563/0.6196, valid: 0.5152/0.5640 test: 0.5046/0.5474
+Epoch 117, train: 0.5624/0.6196, valid: 0.4909/0.5640 test: 0.4832/0.5474
+Epoch 118, train: 0.5712/0.6196, valid: 0.4909/0.5640 test: 0.5046/0.5474
+Epoch 119, train: 0.5883/0.6196, valid: 0.5030/0.5640 test: 0.5199/0.5474
+Epoch 120, train: 0.5925/0.6196, valid: 0.5122/0.5640 test: 0.5321/0.5474
+Epoch 121, train: 0.6021/0.6196, valid: 0.5305/0.5640 test: 0.4985/0.5474
+Epoch 122, train: 0.5982/0.6196, valid: 0.4970/0.5640 test: 0.4954/0.5474
+Epoch 123, train: 0.5933/0.6196, valid: 0.5335/0.5640 test: 0.4893/0.5474
+Epoch 124, train: 0.5868/0.6196, valid: 0.4848/0.5640 test: 0.5015/0.5474
+Epoch 125, train: 0.5979/0.6196, valid: 0.5244/0.5640 test: 0.5321/0.5474
+Epoch 126, train: 0.5918/0.6196, valid: 0.5000/0.5640 test: 0.5199/0.5474
+Epoch 127, train: 0.5914/0.6196, valid: 0.4817/0.5640 test: 0.4954/0.5474
+Epoch 128, train: 0.5948/0.6196, valid: 0.5091/0.5640 test: 0.5229/0.5474
+Epoch 129, train: 0.5975/0.6196, valid: 0.5091/0.5640 test: 0.5138/0.5474
+Epoch 130, train: 0.5921/0.6196, valid: 0.5427/0.5640 test: 0.4893/0.5474
+Epoch 131, train: 0.5940/0.6196, valid: 0.5335/0.5640 test: 0.4648/0.5474
+Epoch 132, train: 0.5784/0.6196, valid: 0.5335/0.5640 test: 0.4862/0.5474
+Epoch 133, train: 0.5681/0.6196, valid: 0.4665/0.5640 test: 0.5015/0.5474
+Epoch 134, train: 0.5734/0.6196, valid: 0.5244/0.5640 test: 0.5443/0.5474
+Epoch 135, train: 0.5807/0.6196, valid: 0.5000/0.5640 test: 0.5291/0.5474
+Epoch 136, train: 0.5857/0.6196, valid: 0.4970/0.5640 test: 0.5260/0.5474
+Epoch 137, train: 0.6005/0.6196, valid: 0.5396/0.5640 test: 0.5015/0.5474
+Epoch 138, train: 0.5899/0.6196, valid: 0.5213/0.5640 test: 0.5107/0.5474
+Epoch 139, train: 0.5921/0.6196, valid: 0.4970/0.5640 test: 0.5046/0.5474
+Epoch 140, train: 0.5952/0.6196, valid: 0.5061/0.5640 test: 0.5107/0.5474
+Epoch 141, train: 0.5971/0.6196, valid: 0.5244/0.5640 test: 0.5199/0.5474
+Epoch 142, train: 0.5910/0.6196, valid: 0.5457/0.5640 test: 0.5076/0.5474
+Epoch 143, train: 0.6040/0.6196, valid: 0.5091/0.5640 test: 0.4954/0.5474
+Epoch 144, train: 0.5872/0.6196, valid: 0.5061/0.5640 test: 0.4985/0.5474
+Epoch 145, train: 0.5799/0.6196, valid: 0.4817/0.5640 test: 0.5138/0.5474
+Epoch 146, train: 0.5887/0.6196, valid: 0.4909/0.5640 test: 0.5076/0.5474
+Epoch 147, train: 0.5872/0.6196, valid: 0.5152/0.5640 test: 0.4924/0.5474
+Epoch 148, train: 0.5914/0.6196, valid: 0.5457/0.5640 test: 0.4954/0.5474
+Epoch 149, train: 0.5845/0.6196, valid: 0.5122/0.5640 test: 0.4801/0.5474
+Epoch 150, train: 0.5887/0.6196, valid: 0.5488/0.5640 test: 0.5443/0.5474
+Epoch 151, train: 0.5895/0.6196, valid: 0.5488/0.5640 test: 0.5015/0.5474
+Epoch 152, train: 0.5860/0.6196, valid: 0.5091/0.5640 test: 0.5015/0.5474
+Epoch 153, train: 0.5364/0.6196, valid: 0.4878/0.5640 test: 0.4893/0.5474
+Epoch 154, train: 0.5422/0.6196, valid: 0.5122/0.5640 test: 0.4862/0.5474
+Epoch 155, train: 0.5410/0.6196, valid: 0.5061/0.5640 test: 0.4832/0.5474
+Epoch 156, train: 0.5437/0.6196, valid: 0.5427/0.5640 test: 0.4801/0.5474
+Epoch 157, train: 0.5288/0.6196, valid: 0.4939/0.5640 test: 0.5168/0.5474
+Epoch 158, train: 0.5570/0.6196, valid: 0.5091/0.5640 test: 0.4679/0.5474
+Epoch 159, train: 0.5525/0.6196, valid: 0.5213/0.5640 test: 0.5076/0.5474
+Epoch 160, train: 0.5593/0.6196, valid: 0.5000/0.5640 test: 0.5260/0.5474
+Epoch 161, train: 0.5494/0.6196, valid: 0.5244/0.5640 test: 0.5046/0.5474
+Epoch 162, train: 0.5776/0.6196, valid: 0.5091/0.5640 test: 0.5199/0.5474
+Epoch 163, train: 0.5815/0.6196, valid: 0.5030/0.5640 test: 0.4893/0.5474
+Epoch 164, train: 0.5902/0.6196, valid: 0.5030/0.5640 test: 0.5138/0.5474
+Epoch 165, train: 0.5921/0.6196, valid: 0.5091/0.5640 test: 0.4740/0.5474
+Epoch 166, train: 0.6051/0.6196, valid: 0.5030/0.5640 test: 0.5076/0.5474
+Epoch 167, train: 0.6005/0.6196, valid: 0.5061/0.5640 test: 0.4618/0.5474
+Epoch 168, train: 0.6074/0.6196, valid: 0.4970/0.5640 test: 0.5168/0.5474
+Epoch 169, train: 0.5998/0.6196, valid: 0.5183/0.5640 test: 0.5076/0.5474
+Epoch 170, train: 0.6101/0.6196, valid: 0.5122/0.5640 test: 0.5260/0.5474
+Epoch 171, train: 0.5975/0.6196, valid: 0.5305/0.5640 test: 0.4985/0.5474
+Epoch 172, train: 0.5876/0.6196, valid: 0.5030/0.5640 test: 0.4954/0.5474
+Epoch 173, train: 0.6002/0.6196, valid: 0.4909/0.5640 test: 0.5138/0.5474
+Epoch 174, train: 0.5952/0.6196, valid: 0.4878/0.5640 test: 0.4893/0.5474
+Epoch 175, train: 0.5990/0.6196, valid: 0.5396/0.5640 test: 0.5260/0.5474
+Epoch 176, train: 0.5956/0.6196, valid: 0.4726/0.5640 test: 0.5138/0.5474
+Epoch 177, train: 0.5815/0.6196, valid: 0.5244/0.5640 test: 0.4985/0.5474
+Epoch 178, train: 0.5956/0.6196, valid: 0.4817/0.5640 test: 0.5382/0.5474
+Epoch 179, train: 0.5929/0.6196, valid: 0.5213/0.5640 test: 0.5046/0.5474
+Epoch 180, train: 0.5986/0.6196, valid: 0.5366/0.5640 test: 0.5229/0.5474
+Epoch 181, train: 0.6070/0.6196, valid: 0.5061/0.5640 test: 0.5168/0.5474
+Epoch 182, train: 0.5998/0.6196, valid: 0.4939/0.5640 test: 0.4954/0.5474
+Epoch 183, train: 0.6024/0.6196, valid: 0.4634/0.5640 test: 0.5138/0.5474
+Epoch 184, train: 0.6024/0.6196, valid: 0.5183/0.5640 test: 0.5382/0.5474
+Epoch 185, train: 0.6089/0.6196, valid: 0.5579/0.5640 test: 0.5199/0.5474
+Epoch 186, train: 0.5925/0.6196, valid: 0.4970/0.5640 test: 0.4740/0.5474
+Epoch 187, train: 0.6017/0.6196, valid: 0.5030/0.5640 test: 0.4985/0.5474
+Epoch 188, train: 0.6036/0.6196, valid: 0.5122/0.5640 test: 0.5107/0.5474
+Epoch 189, train: 0.6059/0.6196, valid: 0.4848/0.5640 test: 0.5015/0.5474
+Epoch 190, train: 0.5853/0.6196, valid: 0.5091/0.5640 test: 0.5107/0.5474
+Epoch 191, train: 0.5952/0.6196, valid: 0.5000/0.5640 test: 0.5352/0.5474
+Epoch 192, train: 0.6131/0.6196, valid: 0.4939/0.5640 test: 0.5076/0.5474
+Epoch 193, train: 0.5975/0.6196, valid: 0.5305/0.5640 test: 0.4862/0.5474
+Epoch 194, train: 0.6002/0.6196, valid: 0.5122/0.5640 test: 0.5168/0.5474
+Epoch 195, train: 0.6108/0.6196, valid: 0.5244/0.5640 test: 0.4924/0.5474
+Epoch 196, train: 0.5990/0.6196, valid: 0.5427/0.5640 test: 0.5138/0.5474
+Epoch 197, train: 0.5925/0.6196, valid: 0.5335/0.5640 test: 0.5015/0.5474
+Epoch 198, train: 0.5918/0.6196, valid: 0.4817/0.5640 test: 0.4495/0.5474
+Epoch 199, train: 0.5807/0.6196, valid: 0.5305/0.5640 test: 0.5260/0.5474
+Epoch 200, train: 0.5857/0.6196, valid: 0.5000/0.5640 test: 0.5076/0.5474
+Epoch 201, train: 0.5841/0.6196, valid: 0.5427/0.5640 test: 0.5015/0.5474
+Epoch 202, train: 0.5799/0.6196, valid: 0.5152/0.5640 test: 0.5138/0.5474
+Epoch 203, train: 0.5979/0.6196, valid: 0.4695/0.5640 test: 0.5443/0.5474
+Epoch 204, train: 0.5952/0.6196, valid: 0.4970/0.5640 test: 0.5260/0.5474
+Epoch 205, train: 0.5902/0.6196, valid: 0.4848/0.5640 test: 0.5321/0.5474
+Epoch 206, train: 0.6101/0.6196, valid: 0.4970/0.5640 test: 0.5291/0.5474
+Epoch 207, train: 0.5921/0.6196, valid: 0.5305/0.5640 test: 0.5382/0.5474
+Epoch 208, train: 0.6036/0.6196, valid: 0.4878/0.5640 test: 0.4679/0.5474
+Epoch 209, train: 0.5918/0.6196, valid: 0.4634/0.5640 test: 0.5199/0.5474
+Epoch 210, train: 0.5837/0.6196, valid: 0.4817/0.5640 test: 0.4954/0.5474
+Epoch 211, train: 0.5826/0.6196, valid: 0.5152/0.5640 test: 0.5229/0.5474
+Epoch 212, train: 0.5998/0.6196, valid: 0.5701/0.5701 test: 0.4893/0.5474
+Epoch 213, train: 0.6085/0.6196, valid: 0.5122/0.5701 test: 0.5168/0.5474
+Epoch 214, train: 0.5891/0.6196, valid: 0.5335/0.5701 test: 0.5076/0.5474
+Epoch 215, train: 0.6154/0.6196, valid: 0.5274/0.5701 test: 0.5107/0.5474
+Epoch 216, train: 0.6093/0.6196, valid: 0.4909/0.5701 test: 0.4954/0.5474
+Epoch 217, train: 0.6112/0.6196, valid: 0.5183/0.5701 test: 0.5199/0.5474
+Epoch 218, train: 0.6097/0.6196, valid: 0.5030/0.5701 test: 0.5382/0.5474
+Epoch 219, train: 0.6036/0.6196, valid: 0.4939/0.5701 test: 0.5474/0.5474
+Epoch 220, train: 0.5940/0.6196, valid: 0.5061/0.5701 test: 0.4985/0.5474
+Epoch 221, train: 0.6051/0.6196, valid: 0.4939/0.5701 test: 0.4985/0.5474
+Epoch 222, train: 0.6082/0.6196, valid: 0.5274/0.5701 test: 0.5107/0.5474
+Epoch 223, train: 0.6013/0.6196, valid: 0.5305/0.5701 test: 0.5138/0.5474
+Epoch 224, train: 0.5963/0.6196, valid: 0.5274/0.5701 test: 0.5505/0.5505
+Epoch 225, train: 0.6143/0.6196, valid: 0.4970/0.5701 test: 0.5138/0.5505
+Epoch 226, train: 0.5845/0.6196, valid: 0.5061/0.5701 test: 0.4985/0.5505
+Epoch 227, train: 0.6021/0.6196, valid: 0.5000/0.5701 test: 0.5443/0.5505
+Epoch 228, train: 0.5963/0.6196, valid: 0.5396/0.5701 test: 0.5260/0.5505
+Epoch 229, train: 0.6036/0.6196, valid: 0.5183/0.5701 test: 0.4924/0.5505
+Epoch 230, train: 0.6032/0.6196, valid: 0.5183/0.5701 test: 0.5260/0.5505
+Epoch 231, train: 0.6078/0.6196, valid: 0.5030/0.5701 test: 0.5076/0.5505
+Epoch 232, train: 0.5971/0.6196, valid: 0.5183/0.5701 test: 0.4771/0.5505
+Epoch 233, train: 0.5879/0.6196, valid: 0.5061/0.5701 test: 0.4832/0.5505
+Epoch 234, train: 0.5872/0.6196, valid: 0.5091/0.5701 test: 0.5199/0.5505
+Epoch 235, train: 0.5860/0.6196, valid: 0.5366/0.5701 test: 0.5046/0.5505
+Epoch 236, train: 0.6040/0.6196, valid: 0.4970/0.5701 test: 0.5474/0.5505
+Epoch 237, train: 0.5815/0.6196, valid: 0.4878/0.5701 test: 0.5229/0.5505
+Epoch 238, train: 0.5956/0.6196, valid: 0.5122/0.5701 test: 0.4709/0.5505
+Epoch 239, train: 0.5956/0.6196, valid: 0.5488/0.5701 test: 0.4832/0.5505
+Epoch 240, train: 0.6051/0.6196, valid: 0.5274/0.5701 test: 0.5260/0.5505
+Epoch 241, train: 0.5998/0.6196, valid: 0.5091/0.5701 test: 0.4985/0.5505
+Epoch 242, train: 0.5879/0.6196, valid: 0.5274/0.5701 test: 0.5199/0.5505
+Epoch 243, train: 0.5994/0.6196, valid: 0.5244/0.5701 test: 0.5015/0.5505
+Epoch 244, train: 0.5887/0.6196, valid: 0.5000/0.5701 test: 0.5107/0.5505
+Epoch 245, train: 0.6043/0.6196, valid: 0.5122/0.5701 test: 0.5138/0.5505
+Epoch 246, train: 0.5967/0.6196, valid: 0.5274/0.5701 test: 0.5138/0.5505
+Epoch 247, train: 0.6188/0.6196, valid: 0.5061/0.5701 test: 0.5015/0.5505
+Epoch 248, train: 0.5998/0.6196, valid: 0.5335/0.5701 test: 0.5015/0.5505
+Epoch 249, train: 0.6009/0.6196, valid: 0.4970/0.5701 test: 0.4771/0.5505

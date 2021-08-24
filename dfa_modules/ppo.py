@@ -394,7 +394,7 @@ class PPOPolicy(object):
                                    self.done: batch['done'],
                                    self.p_target: batch['y']
                                    })
-
+        logger.info('train !!!!!!!!!!!!!')
         # train
         reward_history = []
         reward_averaged = []
@@ -411,29 +411,28 @@ class PPOPolicy(object):
             reward_history.append(ep_reward)
             reward_averaged.append(np.mean(reward_history[-10:]))
             total_rec += n_rec
-            logger.info(f'reward_history:  {reward_history}')
-            for batch in buffer.loop(self.hps.batch_size, self.hps.epochs):
-                _, summ_str = self.sess.run(
-                 [self.train_ops, self.merged_summary],
-                 feed_dict={self.lr_a: self.hps.lr_a,
-                            self.lr_p: self.hps.lr_p,
-                            self.lr_c: self.hps.lr_c,
-                            self.clip_range: clip,
-                            self.state: batch['s'],
-                            self.mask: batch['m'],
-                            self.future: batch['f'],
-                            self.action: batch['a'],
-                            self.next_state: batch['s_next'],
-                            self.reward: batch['r'],
-                            self.done: batch['done'],
-                            self.old_logp_a: batch['old_logp_a'],
-                            self.p_target: batch['y'],
-                            self.v_target: batch['v_target'],
-                            self.adv: batch['adv'],
-                            self.ep_reward: np.mean(reward_history[-10:]) if reward_history else 0.0,
-                            })
-                self.writer.add_summary(summ_str, step)
-                step += 1
+            # for batch in buffer.loop(self.hps.batch_size, self.hps.epochs):
+            #     _, summ_str = self.sess.run(
+            #      [self.train_ops, self.merged_summary],
+            #      feed_dict={self.lr_a: self.hps.lr_a,
+            #                 self.lr_p: self.hps.lr_p,
+            #                 self.lr_c: self.hps.lr_c,
+            #                 self.clip_range: clip,
+            #                 self.state: batch['s'],
+            #                 self.mask: batch['m'],
+            #                 self.future: batch['f'],
+            #                 self.action: batch['a'],
+            #                 self.next_state: batch['s_next'],
+            #                 self.reward: batch['r'],
+            #                 self.done: batch['done'],
+            #                 self.old_logp_a: batch['old_logp_a'],
+            #                 self.p_target: batch['y'],
+            #                 self.v_target: batch['v_target'],
+            #                 self.adv: batch['adv'],
+            #                 self.ep_reward: np.mean(reward_history[-10:]) if reward_history else 0.0,
+            #                 })
+            #     self.writer.add_summary(summ_str, step)
+            step += 1
 
             if self.hps.finetune_env == 1:
                 for batch in buffer.loop(self.hps.finetune_batch_size, self.hps.finetune_epochs):

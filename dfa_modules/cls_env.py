@@ -7,7 +7,7 @@ from scipy.stats import entropy
 
 from utils.hparams import HParams
 from models import get_model
-from datasets.cube import Dataset
+from datasets.questions import Dataset
 
 logger = logging.getLogger()
 

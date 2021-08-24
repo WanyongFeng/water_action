@@ -61,7 +61,7 @@ if args.mode == 'resume':
     agent.train()
 if args.mode == 'train':
     agent.train()
-train_dict = agent.evaluate(hard=args.hard, max_batches=21)
+train_dict = agent.evaluate(hard=args.hard, max_batches=14)
 
 # test
 with tf.device(f"/gpu:{args.env_device}"):
@@ -70,7 +70,7 @@ with tf.device(f"/gpu:{args.env_device}"):
 with tf.device(f"/gpu:{args.agent_device}"):
     agent = PPOPolicy(params, env, 'test')
 
-test_dict = agent.evaluate(hard=args.hard, max_batches=3)
+test_dict = agent.evaluate(hard=args.hard, max_batches=2)
 
 print("train_acflow: " + str(np.mean(train_dict['metrics']['acc_acflow'])))
 print("train_policy: " + str(np.mean(train_dict['metrics']['acc_policy'])))
